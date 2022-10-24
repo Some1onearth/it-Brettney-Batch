@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     #region Variables
     public static Dictionary<ushort, Player> list = new Dictionary<ushort, Player>();
+    [SerializeField] private GameObject model;
     #endregion
 
     public ushort Id { get; private set; }
@@ -29,12 +30,12 @@ public class Player : MonoBehaviour
     {
         interpolator.NewUpdate(tick, newPosition);
         //transform.position = newPosition;
-       
-        if (!IsLocal)
-        {
-            camTransform.forward = forward;
-            animationManager.AnimatedBasedOnSpeed();
-        }
+
+
+        model.transform.forward = forward;
+
+        animationManager.AnimatedBasedOnSpeed();
+
     }
 
 

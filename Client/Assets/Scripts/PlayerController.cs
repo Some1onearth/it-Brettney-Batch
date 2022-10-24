@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+
         if (Input.GetKey(KeyCode.W))
         {
             inputs[0] = true;

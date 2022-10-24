@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool[] inputs;
     private float yVelocity;
+
     
 
 
@@ -55,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+
         Vector2 inputDirection = Vector2.zero;
         if (inputs[0])
         {
@@ -76,6 +78,8 @@ public class PlayerMovement : MonoBehaviour
         }
 
         Move(inputDirection, inputs[4], inputs[5]);
+
+
     }
 
     private void Initialize()
@@ -88,26 +92,39 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     private void Move(Vector2 inputDirection, bool jump, bool sprint)
     {
-        Vector3 moveDirection = Vector3.Normalize(camProxy.right * inputDirection.x + Vector3.Normalize(FlattenVector3(camProxy.forward)) * inputDirection.y);
-        moveDirection *= moveSpeed;
-        if (sprint)
-        {
-            moveDirection *= 2f;
 
-        }
-
-        if (controller.isGrounded)
+//       Set the player's forward rotation to the inputDirection (what way the character is facing)
+//       Make the player Move forward regardless while input is being used.
+//       
+      
+if (inputDirection.magnitude>0)
         {
-            yVelocity = 0f;
-            if (jump)
+            Vector3 lookDirection = new Vector3(inputDirection.x, 0, inputDirection.y);
+            transform.forward = lookDirection;
+            //
+            Vector3 moveDirection = transform.forward;
+            moveDirection *= moveSpeed;
+            if (sprint)
             {
-                yVelocity = jumpSpeed;
-            }
-        }
-        yVelocity += gravityAcceleration;
+                moveDirection *= 2f;
 
-        moveDirection.y = yVelocity;
-        controller.Move(moveDirection);
+            }
+
+            if (controller.isGrounded)
+            {
+                yVelocity = 0f;
+                if (jump)
+                {
+                    yVelocity = jumpSpeed;
+                }
+            }
+            yVelocity += gravityAcceleration;
+
+            moveDirection.y = yVelocity;
+            controller.Move(moveDirection);
+
+        }
+
 
         SendMovement();
     }
@@ -141,7 +158,8 @@ public class PlayerMovement : MonoBehaviour
         message.AddUShort(NetworkManager.NetworkManagerInstance.CurrentTick);
 
         message.AddVector3(transform.position);
-        message.AddVector3(camProxy.forward);
+        message.AddVector3(transform.forward);
+      
         NetworkManager.NetworkManagerInstance.GameServer.SendToAll(message);
 
 
