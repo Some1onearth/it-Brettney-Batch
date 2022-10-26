@@ -6,7 +6,7 @@ using System;
 public enum ServerToClientId : ushort
 {
     sync = 1,
-    playerSpawned = 1,
+    playerSpawned,
     playerMovement,
 }
 
@@ -63,7 +63,7 @@ public class NetworkManager : MonoBehaviour
     private ushort _serverTick;
     public ushort ServerTick
     {
-        get => ServerTick;
+        get => _serverTick;
 
         private set
         {
