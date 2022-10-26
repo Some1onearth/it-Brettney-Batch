@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class ClientUIHandler : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+
+    public float moveSpeed = 3.5f;
+
+   
 
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
+
+    public void Move()
+    {
+
+    }
+
+
+
 }
