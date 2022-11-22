@@ -5,7 +5,7 @@ ModelImporter:
   internalIDToNameTable:
   - first:
       74: -203655887218126122
-    second: sword and shield strafe4
+    second: sword and shield strafe right(fast)
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -35,7 +35,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: sword and shield strafe4
+      name: sword and shield strafe right(fast)
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0
