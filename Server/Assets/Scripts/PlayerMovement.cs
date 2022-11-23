@@ -79,6 +79,7 @@ public class PlayerMovement : MonoBehaviour
 
         Move(inputDirection, inputs[4], inputs[5]);
 
+       
 
     }
 
@@ -163,4 +164,6 @@ if (inputDirection.magnitude>0)
 
 
     }
+
+  
 }
