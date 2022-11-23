@@ -6,19 +6,13 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private Transform camTransform;
-    [SerializeField] private Character _char;
-    [SerializeField] private GameObject _rangedAttackPrefab;
-    private Transform _attackPosition;
 
     private bool[] inputs;
 
     private void Start()
     {
-        inputs = new bool[6];
+        inputs = new bool[7];
     }
-
-
-
 
     private void Update()
     {
@@ -47,30 +41,11 @@ public class PlayerController : MonoBehaviour
         {
             inputs[5] = true;
         }
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //    inputs[6] = true;
-        //}
-
-    }
-
-    private void Attack(Transform target)
-    {
-        if (target != null)
+        if (Input.GetMouseButtonDown(0)) // attack function
         {
-            Debug.Log("Attacking Target!");
-            GameObject rangedProjectile = Instantiate(_rangedAttackPrefab, _attackPosition.position, Quaternion.identity);
-            // var rangedProjectileBehaviour = rangedProjectile.GetComponent<ProjectileBehaviour>();
-            // rangedProjectileBehaviour.Target = target;
-            // rangedProjectileBehaviour.Speed = _char.characterData.attackSpeed;
-            // rangedProjectileBehaviour.Damage = _char.characterData.attackDamage;
-        }
-        else
-        {
-            Debug.Log("No Target!");
+            inputs[6] = true;
         }
     }
-
 
     private void FixedUpdate()
     {
@@ -92,13 +67,6 @@ public class PlayerController : MonoBehaviour
         message.AddVector3(camTransform.forward);
         NetworkManager.NetworkManagerInstance.GameClient.Send(message);
     }
-
-
     #endregion
-
-
-
-
-
 }
 

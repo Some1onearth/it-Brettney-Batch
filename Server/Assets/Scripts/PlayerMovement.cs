@@ -122,7 +122,6 @@ if (inputDirection.magnitude>0)
 
             moveDirection.y = yVelocity;
             controller.Move(moveDirection);
-
         }
 
 
