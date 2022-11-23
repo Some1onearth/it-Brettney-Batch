@@ -1,49 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a79c9bb9-2d78-452d-8bac-0934eb8ac9ce" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/NavMeshComponents.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/NavMeshComponents/Editor.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/NavMeshComponents/Editor/NavMeshAssetManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/NavMeshComponents/Editor/NavMeshAssetManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/NavMeshComponents/Editor/NavMeshComponentsEditor.asmdef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/NavMeshComponents/Editor/NavMeshComponentsEditor.asmdef.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/NavMeshComponents/Editor/NavMeshComponentsGUIUtility.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/NavMeshComponents/Editor/NavMeshComponentsGUIUtility.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/NavMeshComponents/Editor/NavMeshLinkEditor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/NavMeshComponents/Editor/NavMeshLinkEditor.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/NavMeshComponents/Editor/NavMeshModifierEditor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/NavMeshComponents/Editor/NavMeshModifierEditor.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/NavMeshComponents/Editor/NavMeshModifierVolumeEditor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/NavMeshComponents/Editor/NavMeshModifierVolumeEditor.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/NavMeshComponents/Editor/NavMeshSurfaceEditor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/NavMeshComponents/Editor/NavMeshSurfaceEditor.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/NavMeshComponents/Scripts.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/NavMeshComponents/Scripts/NavMeshComponents.asmdef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/NavMeshComponents/Scripts/NavMeshComponents.asmdef.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/NavMeshComponents/Scripts/NavMeshLink.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/NavMeshComponents/Scripts/NavMeshLink.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/NavMeshComponents/Scripts/NavMeshModifier.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/NavMeshComponents/Scripts/NavMeshModifier.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/NavMeshComponents/Scripts/NavMeshModifierVolume.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/NavMeshComponents/Scripts/NavMeshModifierVolume.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/NavMeshComponents/Scripts/NavMeshSurface.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/NavMeshComponents/Scripts/NavMeshSurface.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Client/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Logs/AssetImportWorker0-prev.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Logs/AssetImportWorker0.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Logs/AssetImportWorker1-prev.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Logs/AssetImportWorker1.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Logs/AssetImportWorker2.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Logs/AssetImportWorker3.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Logs/shadercompiler-AssetImportWorker0.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Logs/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Logs/shadercompiler-UnityShaderCompiler.exe2.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Logs/shadercompiler-UnityShaderCompiler.exe3.log" beforeDir="false" />
-    </list>
+    <list default="true" id="a79c9bb9-2d78-452d-8bac-0934eb8ac9ce" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,7 +11,6 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2GL7GsoEWHsjYQC7iHsLy4vDBiY" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -98,14 +55,14 @@
       <updated>1666155993227</updated>
       <workItem from="1666155994233" duration="66000" />
       <workItem from="1666156136727" duration="728000" />
-      <workItem from="1669162976647" duration="4000" />
+      <workItem from="1669163496866" duration="1603000" />
+      <workItem from="1669165976443" duration="1513000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
