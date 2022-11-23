@@ -47,10 +47,7 @@ public class PlayerController : MonoBehaviour
         {
             inputs[5] = true;
         }
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //    inputs[6] = true;
-        //}
+       
 
     }
 

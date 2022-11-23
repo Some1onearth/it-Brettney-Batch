@@ -8,6 +8,8 @@ public enum ServerToClientId : ushort
     sync = 1,
     playerSpawned,
     playerMovement,
+    bullet,
+    bulletspawned,
 }
 
 
