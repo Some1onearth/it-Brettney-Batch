@@ -15,24 +15,12 @@ public class RoomScriptableObject : ScriptableObject
     [SerializeField] private RoomTypes _roomType;
     
     [System.Serializable]
-    private struct EnemySpawnInfo
+    public struct EnemySpawnInfo
     {
-        [SerializeField] [Range(1,5)] private int _enemyCount;
-        [SerializeField] private GameObject _enemyPrefab;
+        [SerializeField] [Range(1,5)] public int _enemyCount;
+        [SerializeField] public List<GameObject> _enemyPrefabs;
     }
 
     [Header("Enemy Room Data")]
-    [SerializeField] private List<EnemySpawnInfo> _enemySpawnsInfo;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField] public EnemySpawnInfo _enemySpawnsInfo;
 }

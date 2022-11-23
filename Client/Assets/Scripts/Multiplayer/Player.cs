@@ -1,4 +1,4 @@
-using RiptideNetworking;
+    using RiptideNetworking;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -38,9 +38,7 @@ public class Player : MonoBehaviour
 
     }
 
-
-
-    public static void Spawn(ushort id, string username, Vector3 position)
+        public static void Spawn(ushort id, string username, Vector3 position)
     {
         Player player;
         if (id == NetworkManager.NetworkManagerInstance.GameClient.Id)
@@ -72,14 +70,6 @@ public class Player : MonoBehaviour
     {
         Spawn(message.GetUShort(), message.GetString(), message.GetVector3());
     }
-
-
-
-
-
-
-
-
 
     [MessageHandler((ushort)ServerToClientId.playerMovement)]
     private static void PlayerMovement(Message message)

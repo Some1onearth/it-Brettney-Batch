@@ -558,6 +558,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camTransform: {fileID: 4782615100965492034}
+  _char: {fileID: 11400000, guid: 798c06aec9ab9fe45b30b6a00b721613, type: 2}
+  _rangedAttackPrefab: {fileID: 5976996778502043199}
 --- !u!114 &1973707392846316128
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,11 +11,8 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        inputs = new bool[6];
+        inputs = new bool[7];
     }
-
-
-
 
     private void Update()
     {
@@ -44,9 +41,11 @@ public class PlayerController : MonoBehaviour
         {
             inputs[5] = true;
         }
-
+        if (Input.GetMouseButtonDown(0)) // attack function
+        {
+            inputs[6] = true;
+        }
     }
-
 
     private void FixedUpdate()
     {
@@ -68,13 +67,6 @@ public class PlayerController : MonoBehaviour
         message.AddVector3(camTransform.forward);
         NetworkManager.NetworkManagerInstance.GameClient.Send(message);
     }
-
-
     #endregion
-
-
-
-
-
 }
 
