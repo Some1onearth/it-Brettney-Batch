@@ -1,123 +1,123 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.32f1 (12f8b0834f07) revision 1243312'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 11  (10.0.22621) 64bit Core' Language: 'en' Physical Memory: 32509 MB
+OS: 'Windows 10  (10.0.19042) 64bit Enterprise' Language: 'en' Physical Memory: 16304 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
 COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Hub\Editor\2020.3.32f1\Editor\Unity.exe
+D:\unity\Unity 2020.3.38f\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/katsu/Desktop/Tafe Diploma 2.0/it-Brettney-Batch/Client
+C:/Users/3ce64b7061da419e/Documents/GitHub/it-Brettney-Batch/Client
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-60640
-Successfully changed project path to: C:/Users/katsu/Desktop/Tafe Diploma 2.0/it-Brettney-Batch/Client
-C:/Users/katsu/Desktop/Tafe Diploma 2.0/it-Brettney-Batch/Client
+58653
+Successfully changed project path to: C:/Users/3ce64b7061da419e/Documents/GitHub/it-Brettney-Batch/Client
+C:/Users/3ce64b7061da419e/Documents/GitHub/it-Brettney-Batch/Client
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 28.26 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 113.81 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.32f1 (12f8b0834f07)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.32f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/katsu/Desktop/Tafe Diploma 2.0/it-Brettney-Batch/Client/Assets
+[Subsystems] Discovering subsystems at path D:/unity/Unity 2020.3.38f/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/3ce64b7061da419e/Documents/GitHub/it-Brettney-Batch/Client/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
-    Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 3080 Laptop GPU (ID=0x249c)
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA Quadro K2200  (ID=0x13ba)
     Vendor:   
-    VRAM:     16191 MB
-    Driver:   31.0.15.2698
+    VRAM:     4035 MB
+    Driver:   10.18.13.5362
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.32f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.32f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.32f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56200
+Mono path[0] = 'D:/unity/Unity 2020.3.38f/Editor/Data/Managed'
+Mono path[1] = 'D:/unity/Unity 2020.3.38f/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'D:/unity/Unity 2020.3.38f/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56044
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.32f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001069 seconds.
+Register platform support module: D:/unity/Unity 2020.3.38f/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.006689 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 27.64 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 42.52 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.396 seconds
+- Completed reload, in  0.685 seconds
 Domain Reload Profiling:
-	ReloadAssembly (396ms)
-		BeginReloadAssembly (41ms)
+	ReloadAssembly (686ms)
+		BeginReloadAssembly (131ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (308ms)
-			LoadAssemblies (39ms)
+		EndReloadAssembly (473ms)
+			LoadAssemblies (130ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (102ms)
+			SetupTypeCache (158ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (19ms)
-			SetupLoadedEditorAssemblies (118ms)
+			RebuildScriptCaches (31ms)
+			SetupLoadedEditorAssemblies (177ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
+				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (28ms)
-				BeforeProcessingInitializeOnLoad (12ms)
-				ProcessInitializeOnLoadAttributes (56ms)
-				ProcessInitializeOnLoadMethodAttributes (19ms)
+				RefreshPlugins (43ms)
+				BeforeProcessingInitializeOnLoad (13ms)
+				ProcessInitializeOnLoadAttributes (84ms)
+				ProcessInitializeOnLoadMethodAttributes (33ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002262 seconds.
+Registered in 0.556688 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.36 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.37 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.686 seconds
+- Completed reload, in  3.372 seconds
 Domain Reload Profiling:
-	ReloadAssembly (687ms)
-		BeginReloadAssembly (98ms)
+	ReloadAssembly (3377ms)
+		BeginReloadAssembly (213ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (14ms)
-		EndReloadAssembly (547ms)
-			LoadAssemblies (64ms)
+			CreateAndSetChildDomain (20ms)
+		EndReloadAssembly (3099ms)
+			LoadAssemblies (2424ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (184ms)
+			SetupTypeCache (285ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (30ms)
-			SetupLoadedEditorAssemblies (215ms)
+			RebuildScriptCaches (43ms)
+			SetupLoadedEditorAssemblies (323ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
+				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (58ms)
-				ProcessInitializeOnLoadAttributes (143ms)
-				ProcessInitializeOnLoadMethodAttributes (6ms)
-				AfterProcessingInitializeOnLoad (4ms)
+				BeforeProcessingInitializeOnLoad (99ms)
+				ProcessInitializeOnLoadAttributes (198ms)
+				ProcessInitializeOnLoadMethodAttributes (10ms)
+				AfterProcessingInitializeOnLoad (11ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (4ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 0.40 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.13 seconds
+Refreshing native plugins compatible for Editor in 0.44 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1895 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 87.0 MB.
-System memory in use after: 87.0 MB.
+System memory in use before: 86.8 MB.
+System memory in use after: 86.8 MB.
 
 Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 2332.
-Total: 2.186500 ms (FindLiveObjects: 0.099000 ms CreateObjectMapping: 0.030700 ms MarkObjects: 1.960400 ms  DeleteObjects: 0.095800 ms)
+Total: 2.585200 ms (FindLiveObjects: 0.132100 ms CreateObjectMapping: 0.065100 ms MarkObjects: 2.266700 ms  DeleteObjects: 0.120500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -131,85 +131,31 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Art/Pro Longbow Pack/Archer Controller.controller
-  artifactKey: Guid(ef5dd300423ed1a4380c4388c4d94b1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Pro Longbow Pack/Archer Controller.controller using Guid(ef5dd300423ed1a4380c4388c4d94b1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62acc0fdcdf6cac243742f53eaf06201') in 0.028124 seconds 
+  path: Assets/Scripts/Multiplayer
+  artifactKey: Guid(0540af76b97c10143b04a399c7d7b914) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Multiplayer using Guid(0540af76b97c10143b04a399c7d7b914) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68e5645344a8876fe98dbe68cd56a45f') in 0.009073 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 19.125060 seconds.
-  path: Assets/Art/Pro Longbow Pack/fall a loop.fbx
-  artifactKey: Guid(fe3ecb99b81fc5d4aba31a4e84abc9ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Pro Longbow Pack/fall a loop.fbx using Guid(fe3ecb99b81fc5d4aba31a4e84abc9ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd82a268e14f9b4b2bec80812b939153b') in 0.039004 seconds 
+  Time since last request: 0.000364 seconds.
+  path: Assets/Scripts
+  artifactKey: Guid(bb3a1a908b9cee64c8505ba93cb0b575) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts using Guid(bb3a1a908b9cee64c8505ba93cb0b575) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fad3cab7b965627031ea05188822ad07') in 0.011425 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.411624 seconds.
-  path: Assets/Art/Pro Longbow Pack/fall a land to standing idle 01.fbx
-  artifactKey: Guid(43bbc2fbd1145284388ca1433a2e0979) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Pro Longbow Pack/fall a land to standing idle 01.fbx using Guid(43bbc2fbd1145284388ca1433a2e0979) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cf0c41252163799ce0aa92f78ea1957') in 0.008871 seconds 
+  Time since last request: 61.598466 seconds.
+  path: Assets/Scenes/SampleScene.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SampleScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ddc6fed93f5bab2d36ffce1ea0de288b') in 0.009343 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 31.013838 seconds.
-  path: Assets/Art/Pro Longbow Pack/standing aim overdraw.fbx
-  artifactKey: Guid(e768f88dcfa7b3c489fdc9dd3f57ec14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Pro Longbow Pack/standing aim overdraw.fbx using Guid(e768f88dcfa7b3c489fdc9dd3f57ec14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd577722d591355358e2f3823d54a3350') in 0.010465 seconds 
+  Time since last request: 59.605523 seconds.
+  path: Assets/Scenes
+  artifactKey: Guid(1a4270299f3d34a4d9c7f59191edc296) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes using Guid(1a4270299f3d34a4d9c7f59191edc296) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfa0a0b23e8f3318f8069d11ba92073d') in 0.009123 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 72.246442 seconds.
-  path: Assets/Art/Pro Longbow Pack/standing idle 01.fbx
-  artifactKey: Guid(692d878741200e14a8c2db8b25eefa18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Pro Longbow Pack/standing idle 01.fbx using Guid(692d878741200e14a8c2db8b25eefa18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '031a81e47fb0c2285a2c6ef7b1201517') in 0.010141 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 176.046356 seconds.
-  path: Assets/Art/Pro Longbow Pack/standing run back.fbx
-  artifactKey: Guid(0931813bf0937fa469fed65b9b799802) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Pro Longbow Pack/standing run back.fbx using Guid(0931813bf0937fa469fed65b9b799802) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f423168cfbcdc104aad9860a43825da4') in 0.018955 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 238.680667 seconds.
-  path: Assets/Art/Pro Longbow Pack/standing walk forward.fbx
-  artifactKey: Guid(4b2497ae84d86dd4f938404998206364) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Pro Longbow Pack/standing walk forward.fbx using Guid(4b2497ae84d86dd4f938404998206364) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81f44e6964f1695a2c1b131e65d0a6ce') in 0.012770 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 10.737950 seconds.
-  path: Assets/Art/Pro Longbow Pack/standing walk back.fbx
-  artifactKey: Guid(dd3bd513c314e044d8e6e0e713b4bb6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Pro Longbow Pack/standing walk back.fbx using Guid(dd3bd513c314e044d8e6e0e713b4bb6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b619f5b07897057348cbc3d28e3bfaa') in 0.009595 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 3.420779 seconds.
-  path: Assets/Art/Pro Longbow Pack/standing turn 90 right.fbx
-  artifactKey: Guid(b3239b509cce67c4585cba6e86908b70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Pro Longbow Pack/standing turn 90 right.fbx using Guid(b3239b509cce67c4585cba6e86908b70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3049e7c7810161ddf03ad293dadaa564') in 0.010931 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 363.605083 seconds.
-  path: Assets/Art/Pro Longbow Pack/standing walk right.fbx
-  artifactKey: Guid(ac870cd2160ba984d8b0cff9501a1688) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Pro Longbow Pack/standing walk right.fbx using Guid(ac870cd2160ba984d8b0cff9501a1688) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44a8fae679190f001968030bdfc1f553') in 0.011988 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 26.230722 seconds.
-  path: Assets/Art/Pro Longbow Pack/standing walk left.fbx
-  artifactKey: Guid(7635258ccd328de419c48a77bf9a6a3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Pro Longbow Pack/standing walk left.fbx using Guid(7635258ccd328de419c48a77bf9a6a3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93a5c550cbaf067d48597b8019673634') in 0.011600 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 131.374343 seconds.
-  path: Assets/Art/Pro Longbow Pack/standing idle 02 looking.fbx
-  artifactKey: Guid(c67edb0f7b072994caf4f86fb1244c75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Pro Longbow Pack/standing idle 02 looking.fbx using Guid(c67edb0f7b072994caf4f86fb1244c75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4857ab8889b60f257c99288a12430d7a') in 0.022416 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 88.118228 seconds.
-  path: Assets/Art/Pro Longbow Pack/standing aim walk left.fbx
-  artifactKey: Guid(e4d70e33938375d4ab0eb06ab6a29628) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Pro Longbow Pack/standing aim walk left.fbx using Guid(e4d70e33938375d4ab0eb06ab6a29628) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '334da0f5d7f99a84d77a7bc9bb449f17') in 0.011350 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 63.176307 seconds.
-  path: Assets/Art/Pro Longbow Pack/standing turn 90 left.fbx
-  artifactKey: Guid(86c70dbc06ee0a144b58a65b09990276) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Pro Longbow Pack/standing turn 90 left.fbx using Guid(86c70dbc06ee0a144b58a65b09990276) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47b4e370f2b374364c3a45ac468c4623') in 0.011767 seconds 
+  Time since last request: 4.367212 seconds.
+  path: Assets/Scenes/Testing Scene.unity
+  artifactKey: Guid(1c04f79c8f929104083417a260530750) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Testing Scene.unity using Guid(1c04f79c8f929104083417a260530750) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fc1ee645c532e6b538c640fad10fbbf') in 0.008198 seconds 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
