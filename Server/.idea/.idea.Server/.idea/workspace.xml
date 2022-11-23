@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a79c9bb9-2d78-452d-8bac-0934eb8ac9ce" name="Changes" comment="" />
+    <list default="true" id="062cc849-1017-478b-a324-7555323831d4" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/205a6c4887a04d59abb3434ed0f7c98913a00/39/f1833e1c/Server.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2GL7GsoEWHsjYQC7iHsLy4vDBiY" />
+  <component name="ProjectId" id="2HvV8eCsZyUKMLRzcOLLyjiCSFD" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -48,15 +51,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a79c9bb9-2d78-452d-8bac-0934eb8ac9ce" name="Changes" comment="" />
-      <created>1666155993227</created>
+      <changelist id="062cc849-1017-478b-a324-7555323831d4" name="Changes" comment="" />
+      <created>1669165428193</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1666155993227</updated>
-      <workItem from="1666155994233" duration="66000" />
-      <workItem from="1666156136727" duration="728000" />
-      <workItem from="1669163496866" duration="1603000" />
-      <workItem from="1669165976443" duration="1513000" />
+      <updated>1669165428193</updated>
+      <workItem from="1669165428193" duration="481000" />
     </task>
     <servers />
   </component>

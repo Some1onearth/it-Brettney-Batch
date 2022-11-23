@@ -6,6 +6,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private Transform camTransform;
+    [SerializeField] private Character _char;
+    [SerializeField] private GameObject _rangedAttackPrefab;
+    private Transform _attackPosition;
 
     private bool[] inputs;
 
@@ -44,7 +47,28 @@ public class PlayerController : MonoBehaviour
         {
             inputs[5] = true;
         }
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    inputs[6] = true;
+        //}
 
+    }
+
+    private void Attack(Transform target)
+    {
+        if (target != null)
+        {
+            Debug.Log("Attacking Target!");
+            GameObject rangedProjectile = Instantiate(_rangedAttackPrefab, _attackPosition.position, Quaternion.identity);
+            // var rangedProjectileBehaviour = rangedProjectile.GetComponent<ProjectileBehaviour>();
+            // rangedProjectileBehaviour.Target = target;
+            // rangedProjectileBehaviour.Speed = _char.characterData.attackSpeed;
+            // rangedProjectileBehaviour.Damage = _char.characterData.attackDamage;
+        }
+        else
+        {
+            Debug.Log("No Target!");
+        }
     }
 
 

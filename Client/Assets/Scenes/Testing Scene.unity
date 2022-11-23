@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3109,6 +3109,7 @@ GameObject:
   - component: {fileID: 742721314}
   - component: {fileID: 742721313}
   - component: {fileID: 742721312}
+  - component: {fileID: 742721316}
   m_Layer: 0
   m_Name: Testing Player
   m_TagString: Untagged
@@ -3187,7 +3188,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 742721311}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.499161, y: 2, z: 45.7}
+  m_LocalPosition: {x: 7.8, y: 2, z: 49.72}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1610813997}
@@ -3195,6 +3196,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &742721316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742721311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d7dfe96eb147d84bb2e03be558678e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &764700588
 Mesh:
   m_ObjectHideFlags: 0
@@ -3695,7 +3708,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!43 &908103240
 Mesh:
@@ -4739,7 +4752,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: da99cbb8c6dfef14fb450436f954cb74, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: da99cbb8c6dfef14fb450436f954cb74, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7736,7 +7749,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5088083795675354361, guid: bcab34876a6b8cd4192fa70ac32b26b1, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5088083795675354361, guid: bcab34876a6b8cd4192fa70ac32b26b1, type: 3}
       propertyPath: m_LocalPosition.x
