@@ -22,10 +22,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Button readyButton;
     [SerializeField] private Text curMobText;
     [SerializeField] private Text curLevelText;
+    [SerializeField] private Text scoreText;
     [SerializeField] private GameObject endGameScreen;
     [SerializeField] private GameObject gameHud;
 
     public GameObject enemyMob;
+    public int currentScore;
     private int _maxMobCount = 0;
     private int _curMobCount = 0;
     private int _curLevel = 0;
@@ -86,7 +88,19 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public void Score()
+    {
+        currentScore += 10;
+        scoreText.text = "" + currentScore;
+        PlayerPrefs.SetInt("Score", currentScore);
+    }
 
+    public void Spend(int price)
+    {
+        currentScore -= price;
+        scoreText.text = "" + currentScore;
+        PlayerPrefs.SetInt("Score", currentScore);
+    }
 
     public void HowManyToSpawn(int spawnvalue)
     {
