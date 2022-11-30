@@ -18,7 +18,6 @@ public class EnemyMovement : MonoBehaviour
     public int nextPoint, difficulty;
     public NavMeshAgent agent;
     public float walkSpeed, runSpeed, attackRange, sightRange;
-    public bool isDead;
     public float distanceToPoint, changePoint;
     public float stopFromPlayer;
     public void Start()
@@ -43,7 +42,7 @@ public class EnemyMovement : MonoBehaviour
     void Patrol()
     {
         //DO NOT CONTINUE IF NO WAYPOINTS, dead, player in range
-        if (wayPoints.Length <= 0 || Vector3.Distance(player.position, transform.position) <= sightRange ||isDead)
+        if (wayPoints.Length <= 0 || Vector3.Distance(player.position, transform.position) <= sightRange)
         {
             return;
         }
@@ -70,7 +69,7 @@ public class EnemyMovement : MonoBehaviour
     void Seek()
     {
         //if the player is out of our sight range and inside our attack range
-        if (Vector3.Distance(player.position, transform.position) > sightRange || Vector3.Distance(player.position, transform.position) < attackRange || isDead)
+        if (Vector3.Distance(player.position, transform.position) > sightRange || Vector3.Distance(player.position, transform.position) < attackRange)
         {
             //stop seeking
             return;
