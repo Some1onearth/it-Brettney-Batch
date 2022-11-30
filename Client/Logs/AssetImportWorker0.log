@@ -15,7 +15,7 @@ C:/Users/katsu/Desktop/Tafe Diploma 2.0/it-Brettney-Batch/Client
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-63461
+63004
 Successfully changed project path to: C:/Users/katsu/Desktop/Tafe Diploma 2.0/it-Brettney-Batch/Client
 C:/Users/katsu/Desktop/Tafe Diploma 2.0/it-Brettney-Batch/Client
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Users/katsu/Desktop/Tafe Diploma 2.0/it-Brettney-Batch/Client
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 30.63 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 27.63 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.8f1 (b30333d56e81)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.8f1/Editor/Data/Resources/UnitySubsystems
@@ -63,90 +63,90 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.8f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.8f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56108
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56928
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.8f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.004090 seconds.
+Registered in 0.004059 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 29.32 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 27.09 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.547 seconds
+- Completed reload, in  0.461 seconds
 Domain Reload Profiling:
-	ReloadAssembly (547ms)
-		BeginReloadAssembly (63ms)
+	ReloadAssembly (462ms)
+		BeginReloadAssembly (53ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (386ms)
-			LoadAssemblies (62ms)
+		EndReloadAssembly (325ms)
+			LoadAssemblies (52ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (108ms)
+			SetupTypeCache (79ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (26ms)
-			SetupLoadedEditorAssemblies (204ms)
+			RebuildScriptCaches (21ms)
+			SetupLoadedEditorAssemblies (187ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (59ms)
+				InitializePlatformSupportModulesInManaged (45ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (29ms)
+				RefreshPlugins (27ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (81ms)
-				ProcessInitializeOnLoadMethodAttributes (33ms)
+				ProcessInitializeOnLoadAttributes (75ms)
+				ProcessInitializeOnLoadMethodAttributes (39ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002557 seconds.
+Registered in 0.002733 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 0.47 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.55 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.959 seconds
+- Completed reload, in  0.922 seconds
 Domain Reload Profiling:
-	ReloadAssembly (960ms)
-		BeginReloadAssembly (190ms)
+	ReloadAssembly (922ms)
+		BeginReloadAssembly (220ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
+			DisableScriptedObjects (7ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (120ms)
-		EndReloadAssembly (655ms)
-			LoadAssemblies (60ms)
+			CreateAndSetChildDomain (129ms)
+		EndReloadAssembly (613ms)
+			LoadAssemblies (62ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
 			SetupTypeCache (148ms)
-			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (37ms)
-			SetupLoadedEditorAssemblies (379ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (39ms)
+			SetupLoadedEditorAssemblies (333ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (11ms)
-				SetLoadedEditorAssemblies (0ms)
+				InitializePlatformSupportModulesInManaged (12ms)
+				SetLoadedEditorAssemblies (1ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (58ms)
-				ProcessInitializeOnLoadAttributes (284ms)
+				BeforeProcessingInitializeOnLoad (53ms)
+				ProcessInitializeOnLoadAttributes (240ms)
 				ProcessInitializeOnLoadMethodAttributes (21ms)
-				AfterProcessingInitializeOnLoad (4ms)
+				AfterProcessingInitializeOnLoad (7ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (4ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 0.41 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.60 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2119 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 83 unused Assets / (96.1 KB). Loaded Objects now: 2580.
-Memory consumption went from 91.2 MB to 91.1 MB.
-Total: 3.759600 ms (FindLiveObjects: 0.257000 ms CreateObjectMapping: 0.077600 ms MarkObjects: 3.161100 ms  DeleteObjects: 0.262800 ms)
+Unloading 83 unused Assets / (102.5 KB). Loaded Objects now: 2581.
+Memory consumption went from 91.4 MB to 91.3 MB.
+Total: 2.997200 ms (FindLiveObjects: 0.166600 ms CreateObjectMapping: 0.045400 ms MarkObjects: 2.605100 ms  DeleteObjects: 0.178900 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -160,293 +160,203 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 395.798994 seconds.
-  path: Assets/Master.mixer
-  artifactKey: Guid(6f108c38e7185f34a9dbebb706142509) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Master.mixer using Guid(6f108c38e7185f34a9dbebb706142509) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5b670611857bf54e135023b6eb0de6a') in 0.022415 seconds 
+  Time since last request: 1518.970774 seconds.
+  path: Assets/Prefabs/Local.mat
+  artifactKey: Guid(6ec0fa72b2069574fb89c4f5aec3d081) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Local.mat using Guid(6ec0fa72b2069574fb89c4f5aec3d081) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad3e0c71cfe22ce9d6d6f6b76beedc54') in 0.107791 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 11.204636 seconds.
-  path: Assets/Prefabs
-  artifactKey: Guid(63642bad155f37c4abbc75d2db79fbb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs using Guid(63642bad155f37c4abbc75d2db79fbb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45f8d220f1d367c7ad1402eb546edbe3') in 0.004843 seconds 
+  Time since last request: 0.000017 seconds.
+  path: Assets/Prefabs/LevelScene
+  artifactKey: Guid(a6ee65d3d96ee6f4eb934827cf1e3890) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/LevelScene using Guid(a6ee65d3d96ee6f4eb934827cf1e3890) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '717fe941c9ccac7d86ed1a625e349351') in 0.005957 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.770113 seconds.
-  path: Assets/Scenes
-  artifactKey: Guid(1a4270299f3d34a4d9c7f59191edc296) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes using Guid(1a4270299f3d34a4d9c7f59191edc296) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eff8ebfcc54fcd0a9bd59f9a012433d4') in 0.005246 seconds 
+  Time since last request: 0.000032 seconds.
+  path: Assets/Prefabs/LevelScene/New Material.mat
+  artifactKey: Guid(478753fe8712f6344b77d7ae24c3cdac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/LevelScene/New Material.mat using Guid(478753fe8712f6344b77d7ae24c3cdac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5564b56c960272d42288121313a4fc0') in 0.012955 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.382479 seconds.
-  path: Assets/Scenes/Level Scene.unity
-  artifactKey: Guid(1c04f79c8f929104083417a260530750) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Level Scene.unity using Guid(1c04f79c8f929104083417a260530750) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2539c7cddf5754be1e40e569bc7579db') in 0.004892 seconds 
+  Time since last request: 0.000026 seconds.
+  path: Assets/Prefabs/AdrienTestingScene.prefab
+  artifactKey: Guid(3aac3ecdca065a44489408b01531a134) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/AdrienTestingScene.prefab using Guid(3aac3ecdca065a44489408b01531a134) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3c7ab6cba9bb77e0933fb01804b6017') in 0.289031 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 3.219074 seconds.
-  path: Assets/Scenes/Menu Scene.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Menu Scene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '152457d13966afe94105f142b563ee0e') in 0.004985 seconds 
+  Time since last request: 1885.609555 seconds.
+  path: Assets/Scenes/Testing Scene
+  artifactKey: Guid(c2d68e3e37bc52344943bf55cb4a584b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Testing Scene using Guid(c2d68e3e37bc52344943bf55cb4a584b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7bf43fbe33d1ee1e0ab761d7f567cc2') in 0.006148 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 2.362276 seconds.
-  path: Assets/Scenes/Testing Scene.unity
-  artifactKey: Guid(050c0c7a76998d64381b9011bcceed3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Testing Scene.unity using Guid(050c0c7a76998d64381b9011bcceed3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d037b2987902c25e39e41587b092332') in 0.005005 seconds 
+  Time since last request: 0.078568 seconds.
+  path: Assets/Scenes/Testing Scene/NavMesh.asset
+  artifactKey: Guid(a1df84ef9b38f044982a3063376eb165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Testing Scene/NavMesh.asset using Guid(a1df84ef9b38f044982a3063376eb165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c4b5b4c1843c28388289b63666d1fdb') in 0.007619 seconds 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002232 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 0.75 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
-
-Mono: successfully reloaded assembly
-- Completed reload, in  0.841 seconds
-Domain Reload Profiling:
-	ReloadAssembly (841ms)
-		BeginReloadAssembly (112ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (29ms)
-		EndReloadAssembly (629ms)
-			LoadAssemblies (68ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (139ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (37ms)
-			SetupLoadedEditorAssemblies (342ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (27ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (57ms)
-				ProcessInitializeOnLoadAttributes (225ms)
-				ProcessInitializeOnLoadMethodAttributes (26ms)
-				AfterProcessingInitializeOnLoad (6ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.62 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2087 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 14 unused Assets / (62.3 KB). Loaded Objects now: 2584.
-Memory consumption went from 88.6 MB to 88.5 MB.
-Total: 3.726100 ms (FindLiveObjects: 0.154800 ms CreateObjectMapping: 0.037200 ms MarkObjects: 3.416300 ms  DeleteObjects: 0.116300 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Received Import Request.
+  Time since last request: 4.834729 seconds.
+  path: Assets/Art
+  artifactKey: Guid(f6e6d88952ebbba4d9b67918ae7f4444) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art using Guid(f6e6d88952ebbba4d9b67918ae7f4444) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33c10d1bdd3c846e7a96fb695f77724c') in 0.005685 seconds 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002426 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 0.41 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
-
-Mono: successfully reloaded assembly
-- Completed reload, in  0.706 seconds
-Domain Reload Profiling:
-	ReloadAssembly (707ms)
-		BeginReloadAssembly (103ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (27ms)
-		EndReloadAssembly (533ms)
-			LoadAssemblies (56ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (135ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (28ms)
-			SetupLoadedEditorAssemblies (278ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (20ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (40ms)
-				ProcessInitializeOnLoadAttributes (183ms)
-				ProcessInitializeOnLoadMethodAttributes (29ms)
-				AfterProcessingInitializeOnLoad (5ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.38 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2087 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 14 unused Assets / (62.4 KB). Loaded Objects now: 2587.
-Memory consumption went from 88.6 MB to 88.5 MB.
-Total: 2.653800 ms (FindLiveObjects: 0.154100 ms CreateObjectMapping: 0.038000 ms MarkObjects: 2.381500 ms  DeleteObjects: 0.078900 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Received Import Request.
+  Time since last request: 1.853318 seconds.
+  path: Assets/Art/Great Sword Pack
+  artifactKey: Guid(71504f189e074264a92cd7e7ff55ec06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Great Sword Pack using Guid(71504f189e074264a92cd7e7ff55ec06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e832442774c0238c3dc535b6e617b94') in 0.005596 seconds 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002955 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 0.47 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
-
-Mono: successfully reloaded assembly
-- Completed reload, in  0.891 seconds
-Domain Reload Profiling:
-	ReloadAssembly (892ms)
-		BeginReloadAssembly (118ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (32ms)
-		EndReloadAssembly (691ms)
-			LoadAssemblies (66ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (170ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (35ms)
-			SetupLoadedEditorAssemblies (378ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (20ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (56ms)
-				ProcessInitializeOnLoadAttributes (257ms)
-				ProcessInitializeOnLoadMethodAttributes (38ms)
-				AfterProcessingInitializeOnLoad (6ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.33 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2087 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 14 unused Assets / (62.4 KB). Loaded Objects now: 2590.
-Memory consumption went from 88.6 MB to 88.5 MB.
-Total: 3.627400 ms (FindLiveObjects: 0.159800 ms CreateObjectMapping: 0.040800 ms MarkObjects: 3.341000 ms  DeleteObjects: 0.084300 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Received Import Request.
+  Time since last request: 0.053990 seconds.
+  path: Assets/Art/Great Sword Pack/draw a great sword 1.fbx
+  artifactKey: Guid(d8d2b4e3dc008754c884d7e18f499dcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Great Sword Pack/draw a great sword 1.fbx using Guid(d8d2b4e3dc008754c884d7e18f499dcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e68d613b7d9ab334dde4558110febfd') in 0.040461 seconds 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003515 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 0.40 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
-
-Mono: successfully reloaded assembly
-- Completed reload, in  0.734 seconds
-Domain Reload Profiling:
-	ReloadAssembly (735ms)
-		BeginReloadAssembly (103ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (26ms)
-		EndReloadAssembly (556ms)
-			LoadAssemblies (59ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (150ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (30ms)
-			SetupLoadedEditorAssemblies (282ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (18ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (40ms)
-				ProcessInitializeOnLoadAttributes (189ms)
-				ProcessInitializeOnLoadMethodAttributes (29ms)
-				AfterProcessingInitializeOnLoad (6ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.88 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2087 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 14 unused Assets / (77.5 KB). Loaded Objects now: 2593.
-Memory consumption went from 88.7 MB to 88.6 MB.
-Total: 2.785600 ms (FindLiveObjects: 0.157000 ms CreateObjectMapping: 0.044600 ms MarkObjects: 2.475400 ms  DeleteObjects: 0.107800 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Art/Great Sword Pack/great sword slash (4).fbx
+  artifactKey: Guid(932947cf88aab88428e37b21fad839ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Great Sword Pack/great sword slash (4).fbx using Guid(932947cf88aab88428e37b21fad839ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07f6792e3a2e7dc5bab5ad332ca1cc59') in 0.018427 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Art/Great Sword Pack/two handed sword death.fbx
+  artifactKey: Guid(cf763c22caa89954db7f7b9c947cfc98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Great Sword Pack/two handed sword death.fbx using Guid(cf763c22caa89954db7f7b9c947cfc98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37a3be1f634f9d63edf4ee597ab4fdb2') in 0.015128 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Art/Great Sword Pack/great sword crouching (6).fbx
+  artifactKey: Guid(04145982200f84a4688cc45f1588bf36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Great Sword Pack/great sword crouching (6).fbx using Guid(04145982200f84a4688cc45f1588bf36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4231b638451215e6e3d8997da5daa873') in 0.014816 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Art/Great Sword Pack/great sword impact (3).fbx
+  artifactKey: Guid(792eed04f8358604da8f1b381747604d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Great Sword Pack/great sword impact (3).fbx using Guid(792eed04f8358604da8f1b381747604d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c902286349ac3ac010019825125bbac5') in 0.016216 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Art/Great Sword Pack/great sword crouching (5).fbx
+  artifactKey: Guid(16ac2a9f81ebd5f42bdd80de29ca9217) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Great Sword Pack/great sword crouching (5).fbx using Guid(16ac2a9f81ebd5f42bdd80de29ca9217) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d7dab434d9ef24378fca4092ec862bc') in 0.014616 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Art/Great Sword Pack/great sword kick (2).fbx
+  artifactKey: Guid(f35919f4eb22f0340aa6f3f2aa5b3c28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Great Sword Pack/great sword kick (2).fbx using Guid(f35919f4eb22f0340aa6f3f2aa5b3c28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed6c171e7d4a8f79717b707fad7f613e') in 0.014548 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Art/Great Sword Pack/great sword casting.fbx
+  artifactKey: Guid(0927ff62b46011a46889249ab81b0d36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Great Sword Pack/great sword casting.fbx using Guid(0927ff62b46011a46889249ab81b0d36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24148d88eaabae4bdfb3240a777a3c14') in 0.014990 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Art/Great Sword Pack/great sword attack.fbx
+  artifactKey: Guid(f81eff713e327d442a3b1d0d361175fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Great Sword Pack/great sword attack.fbx using Guid(f81eff713e327d442a3b1d0d361175fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00faee0de94b0ac0ecd68bd7170a815f') in 0.014651 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Art/Great Sword Pack/great sword jump (2).fbx
+  artifactKey: Guid(a09559626429c0a44a0da25cba4d7b0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Great Sword Pack/great sword jump (2).fbx using Guid(a09559626429c0a44a0da25cba4d7b0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '543aa48123dfefc883b05a43a00b5fa1') in 0.015219 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Art/Great Sword Pack/great sword turn (2).fbx
+  artifactKey: Guid(a273bdd07c7d56b4499f1860bc08142b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Great Sword Pack/great sword turn (2).fbx using Guid(a273bdd07c7d56b4499f1860bc08142b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e7df85086e65af1f7b066009a90c00e') in 0.013860 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Art/Great Sword Pack/great sword strafe (2).fbx
+  artifactKey: Guid(97253bff2676f2944ac8f0fdd19366e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Great Sword Pack/great sword strafe (2).fbx using Guid(97253bff2676f2944ac8f0fdd19366e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2553f0bdcd78fde6b07f5147a5a56d0') in 0.014563 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Art/Great Sword Pack/great sword jump attack.fbx
+  artifactKey: Guid(063c2d784a4ab7049b3774f31b8ee73a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Great Sword Pack/great sword jump attack.fbx using Guid(063c2d784a4ab7049b3774f31b8ee73a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0dccd9f2c3a6fd6a29b236563504ef47') in 0.015793 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Art/Great Sword Pack/great sword slash (5).fbx
+  artifactKey: Guid(18469acd1db28ca4ba8dc222e1c77fcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Great Sword Pack/great sword slash (5).fbx using Guid(18469acd1db28ca4ba8dc222e1c77fcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6ac077026ea5782e328e1aafc405bd5') in 0.017455 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Art/Great Sword Pack/great sword impact (4).fbx
+  artifactKey: Guid(aa908f8ace4ef4d46b81c5b4955f54ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Great Sword Pack/great sword impact (4).fbx using Guid(aa908f8ace4ef4d46b81c5b4955f54ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c0e0c0e1279637ffba04944c149d12b') in 0.015885 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Art/Great Sword Pack/great sword impact.fbx
+  artifactKey: Guid(32a4b1cda8de6ec46aff0eb390abf0d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Great Sword Pack/great sword impact.fbx using Guid(32a4b1cda8de6ec46aff0eb390abf0d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3dd97f03707034d84ee353534933fa5') in 0.015987 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Art/Great Sword Pack/great sword crouching.fbx
+  artifactKey: Guid(129166cc48b8dd94ca54f8016a0a5285) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Great Sword Pack/great sword crouching.fbx using Guid(129166cc48b8dd94ca54f8016a0a5285) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd32c88066265eb5bfcb6aea76856ee2') in 0.015862 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Art/Great Sword Pack/great sword walk (2).fbx
+  artifactKey: Guid(1945101d870ce3242a655da47cb9d351) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Great Sword Pack/great sword walk (2).fbx using Guid(1945101d870ce3242a655da47cb9d351) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fd9a09b6bbb41a1989ad6f273a6ded6') in 0.023425 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Art/Great Sword Pack/great sword idle (4).fbx
+  artifactKey: Guid(1cf6a34924948cb43b73d3bb86a5e819) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Great Sword Pack/great sword idle (4).fbx using Guid(1cf6a34924948cb43b73d3bb86a5e819) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '581fc78db091570999f1fff4970f1e7d') in 0.016760 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Art/Great Sword Pack/two handed sword death (2).fbx
+  artifactKey: Guid(3bf093f616bd60c4fb84099a0d102dd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Great Sword Pack/two handed sword death (2).fbx using Guid(3bf093f616bd60c4fb84099a0d102dd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9db6f4c48b769429647baed1f7a239f') in 0.017097 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Art/Great Sword Pack/great sword power up.fbx
+  artifactKey: Guid(957e6fe166bd8b44ab9d0aea4bff0405) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Great Sword Pack/great sword power up.fbx using Guid(957e6fe166bd8b44ab9d0aea4bff0405) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb8f43c02db4e544e40341a92958cf25') in 0.014085 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Art/Great Sword Pack/great sword idle (2).fbx
+  artifactKey: Guid(3f7494afcf8a5ac4b9d4b5389806ec0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Great Sword Pack/great sword idle (2).fbx using Guid(3f7494afcf8a5ac4b9d4b5389806ec0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3b7b4be08788ae525ab2d33daada761') in 0.014842 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Art/Great Sword Pack/great sword run (2).fbx
+  artifactKey: Guid(f0eb7c937639e5a4caf71b53fc39e731) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Great Sword Pack/great sword run (2).fbx using Guid(f0eb7c937639e5a4caf71b53fc39e731) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7225409dbfa893153bcb002a2468a6b') in 0.015273 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Art/Great Sword Pack/great sword walk.fbx
+  artifactKey: Guid(ac27c1aeda460ed4eb71a0aa4d9031a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Great Sword Pack/great sword walk.fbx using Guid(ac27c1aeda460ed4eb71a0aa4d9031a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eed973eb3ea288681919d72603b5aae2') in 0.015490 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Art/Great Sword Pack/Maria WProp J J Ong.fbx
+  artifactKey: Guid(9ee83a57015ffd54190b41b838d9e2dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Great Sword Pack/Maria WProp J J Ong.fbx using Guid(9ee83a57015ffd54190b41b838d9e2dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36bf074ea0b790c93dea2a33f2e044ac') in 0.070993 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
