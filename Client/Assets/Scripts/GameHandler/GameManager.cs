@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Text curLevelText;
     [SerializeField] private GameObject endGameScreen;
     [SerializeField] private GameObject gameHud;
+
+    public GameObject enemyMob;
     private int _maxMobCount = 0;
     private int _curMobCount = 0;
     private int _curLevel = 0;
@@ -70,9 +72,12 @@ public class GameManager : MonoBehaviour
 
     private void NewLevel()
     {
+
         _curLevel++;
         _maxMobCount += _curLevel;
         _curMobCount = _maxMobCount;
+        HowManyToSpawn(_maxMobCount);
+       
     }
     private void PostGameScreen()
     {
@@ -80,5 +85,42 @@ public class GameManager : MonoBehaviour
         endGameScreen.SetActive(true);
 
     }
+
+
+
+    public void HowManyToSpawn(int spawnvalue)
+    {
+       
+
+        for (int i = 0; i <= spawnvalue; i++)
+        {
+            SpawnEnemy();
+        }
+
+        spawnvalue = 0;
+
+    }
+
+    public void SpawnEnemy()
+    {
+        Instantiate(enemyMob, new Vector3((Random.Range(-21.75f,23.25f)),0 ,(Random.Range(13,60)) ),Quaternion.identity);
+    }
+
+
+
+
+
+
+    /* Raw Data
+     * X Min = -21.75
+     * X Max = 23.25
+     * Z Min = 13
+     * Z Max = 60
+     * 
+     * 
+     * 
+     * 
+     * 
+     */
 
 }
