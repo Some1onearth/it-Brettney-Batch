@@ -23,11 +23,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Text curMobText;
     [SerializeField] private Text curLevelText;
     [SerializeField] private Text scoreText;
+    [SerializeField] private Text currencyText;
     [SerializeField] private GameObject endGameScreen;
     [SerializeField] private GameObject gameHud;
 
     public GameObject enemyMob;
     public int currentScore;
+    public int addScore = 5;
+    public int currentCurrency;
     private int _maxMobCount = 0;
     private int _curMobCount = 0;
     private int _curLevel = 0;
@@ -54,6 +57,7 @@ public class GameManager : MonoBehaviour
        
 
         curLevelText.text = "Stage: " + _curLevel;
+        Currency();
     }
 
 
@@ -88,18 +92,25 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void Score()
+    public void AddScore()
     {
-        currentScore += 10;
+        currentScore += addScore;
         scoreText.text = "" + currentScore;
         PlayerPrefs.SetInt("Score", currentScore);
     }
 
+    public void Currency()
+    {
+        currentCurrency = currentScore / 10;
+        currencyText.text = "" + currentCurrency;
+        PlayerPrefs.SetInt("Currency", currentCurrency);
+    }
+
     public void Spend(int price)
     {
-        currentScore -= price;
-        scoreText.text = "" + currentScore;
-        PlayerPrefs.SetInt("Score", currentScore);
+        currentCurrency -= price;
+        currencyText.text = "" + currentCurrency;
+        PlayerPrefs.SetInt("Currency", currentCurrency);
     }
 
     public void HowManyToSpawn(int spawnvalue)
