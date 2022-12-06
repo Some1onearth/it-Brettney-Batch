@@ -11,6 +11,13 @@ public class Room : MonoBehaviour
     [SerializeField] private float _timer;
     [SerializeField] private float _spawnDelay = 2f;
 
+
+    #region Network Spawn Variables
+    public static Dictionary<ushort, Room> list = new Dictionary<ushort, Room>();
+
+    public ushort EnemyId { get; private set; }
+    public string EnemyName { get; private set; }
+    #endregion
     private void Start()
     {
         SpawnEnemies();
@@ -37,4 +44,10 @@ public class Room : MonoBehaviour
 
         _shouldSpawn = false;
     }
+
+
+    #region Network Spawn Methods
+
+
+    #endregion
 }
