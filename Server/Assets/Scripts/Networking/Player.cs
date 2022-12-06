@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
 {
     //part of send movement, make bool isAttacking, then send it back to client, make another script like this for enemy
     #region Variables
-    public static Dictionary<ushort, Player> list = new Dictionary<ushort, Player>();//do this for enemy in a new script, make navmesh on server, then send position to client, if collission on server, remove that enemy and update players health? if all enemies dead open door to the next room.
+    public static Dictionary<ushort, Player> list = new Dictionary<ushort, Player>();//do this for enemy in a new script, make navmesh on server, then send position to client, if collission on server, remove that enemy and add score to that player.
     #endregion
     #region Properties
     public ushort Id { get; private set; }
