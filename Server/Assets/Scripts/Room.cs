@@ -30,7 +30,7 @@ public class Room : MonoBehaviour
 
     private void SpawnEnemies()
     {
-        for(int i = 0; i < _enemiesToSpawn; i++)
+        for (int i = 0; i < _enemiesToSpawn; i++)
         {
             Instantiate(_enemyPrefab, new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10)), Quaternion.identity);
         }
