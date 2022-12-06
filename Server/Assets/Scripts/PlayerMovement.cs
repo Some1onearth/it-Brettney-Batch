@@ -164,6 +164,28 @@ if (inputDirection.magnitude>0)
 
 
     }
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        Rigidbody rigidbody = hit.collider.attachedRigidbody;
 
-  
+        if (rigidbody != null)
+        {
+            Debug.Log("Collission with something>");
+            if (hit.gameObject.CompareTag("Enemy"))//We will send a message to the client containing what enemy was hit, and the new player Score.
+            {
+                Debug.Log("Collission with Enemy");
+                //When we want to send a message, we need to create the message using the sendmond and also what is the message Type(In this case collision)
+                //Then we need to add all the values that we are passing through, for this we are passing through the score that the player will get
+                //Message message = Message.Create(MessageSendMode.reliable, (ushort)ServerToClientId.collision); //Creates the message
+                //message.AddInt(score);//Sends this value of how much score the player gets.
+                //message.AddInt(enemyId); //Sends the ID of the enemy.
+
+                //NetworkManager.NetworkManagerInstance.GameServer.SendToAll(message);//Sends this message to all clients
+
+                Destroy(hit.gameObject); //destroys this object
+
+            }
+        }
+    }
+
 }
