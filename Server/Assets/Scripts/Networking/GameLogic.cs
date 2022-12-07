@@ -35,7 +35,7 @@ public class GameLogic : MonoBehaviour
 
     #region Variables
     public GameObject PlayerPrefab => playerPrefab;
-    public GameLogic EnemyPrefab => EnemyPrefab;
+    public GameObject EnemyPrefab => enemyPrefab;
 
     [Header("Prefabs")]
     [SerializeField] private GameObject playerPrefab;

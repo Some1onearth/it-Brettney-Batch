@@ -12,27 +12,8 @@ public class Enemy : MonoBehaviour
     private static int nextEnemyId = 1;
 
     public int id;
-    //public EnemyState state;
-    //public Player target;
-    //public CharacterController controller;
-    //public Transform shootOrigin;
-    //public float gravity = -9.81f;
-    //public float patrolSpeed = 2f;
-    //public float chaseSpeed = 8f;
-    //public float health;
-    //public float maxHealth = 100f;
-    //public float detectionRange = 30f;
-    //public float shootRange = 15f;
-    //public float shootAccuracy = 3;
-    //public float idleDuration = 1f;
-
-    //private bool isPatrolRoutineRunning;
-    //private float yVelocity = 0;
-
-
 
     #endregion
-
 
     public NavMeshAgent enemy;
 
@@ -51,31 +32,15 @@ public class Enemy : MonoBehaviour
         nextEnemyId++;
         enemies.Add(id, this);
 
-      //  state = EnemyState.patrol;
-      //  gravity *= Time.fixedDeltaTime * Time.fixedDeltaTime;
-     //   patrolSpeed *= Time.fixedDeltaTime;
-      //  chaseSpeed *= Time.fixedDeltaTime;
 
 
-        }
 
-       
+    }
 
-        ////private void LookForPlayer()
-        ////{
-        ////    foreach 
-        ////}
 
-        //public enum EnemyState
-        //{
-        //    idle,
-        //    patrol,
-        //    chase,
-        //    attack
-        //}
 
-        #endregion
-        private void Awake()
+    #endregion
+    private void Awake()
     {
         enemy = GetComponent<NavMeshAgent>();
     }

@@ -128,10 +128,10 @@ public class NetworkManager : MonoBehaviour
     //    Instantiate(_enemyPrefab, _position, Quaternion.identity);
     //}
 
-    private void EnemyDied(object sender, ClientDisconnectedEventArgs e)
-    {
-        Destroy(EnemyHandler.list[e.Id].gameObject);
-    }
+    //private void EnemyDied(object sender, ClientDisconnectedEventArgs e)
+    //{
+    //    Destroy(EnemyHandler.list[e.Id].gameObject);
+    //}
 
     #endregion
 }

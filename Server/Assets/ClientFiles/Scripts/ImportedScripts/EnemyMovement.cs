@@ -52,7 +52,7 @@ public class EnemyMovement : MonoBehaviour
         agent.speed = walkSpeed;
         distanceToPoint = Vector3.Distance(transform.position, wayPoints[nextPoint].position);
         //are we at the waypoint
-        if(distanceToPoint <=changePoint)
+        if (distanceToPoint <= changePoint)
         {
             //if so go to next waypoint
             if (nextPoint < wayPoints.Length - 1)

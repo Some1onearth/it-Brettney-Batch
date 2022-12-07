@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class Room : MonoBehaviour
 {
+    #region NetworkVariables
+    public static Dictionary<ushort, Player> list = new Dictionary<ushort, Player>();
+
+
+    public ushort EnemyId { get; private set; }
+    public Vector3 EnemyPosition { get; private set; }
+    #endregion
+
     [SerializeField] private int _currentWave = 0, _maxWave = 3;
     [SerializeField] private bool _shouldSpawn;
     [SerializeField] private int _enemiesToSpawn;
