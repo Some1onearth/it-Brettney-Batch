@@ -15,10 +15,9 @@ GameObject:
   - component: {fileID: 4703028490180230644}
   - component: {fileID: 8280665204066829962}
   - component: {fileID: 3185392916798838635}
-  - component: {fileID: 1260622328719593353}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -162,24 +161,3 @@ MonoBehaviour:
   distanceToPoint: 0
   changePoint: 1
   stopFromPlayer: 0
---- !u!114 &1260622328719593353
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1988563410076853048}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b0ea29a582badb4d9022aa61047a8e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
-  _currentWave: 0
-  _maxWave: 3
-  _shouldSpawn: 0
-  _enemiesToSpawn: 0
-  _enemyPrefab: {fileID: 0}
-  _timer: 0
-  _spawnDelay: 2
-  enemyReferenceID: 0
