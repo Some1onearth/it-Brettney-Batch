@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7738772903104211715}
   - component: {fileID: 1147219191496908167}
   - component: {fileID: 192322047363451207}
-  - component: {fileID: 4703028490180230644}
   - component: {fileID: 8280665204066829962}
   - component: {fileID: 3185392916798838635}
   - component: {fileID: 3613366326292777715}
@@ -103,28 +102,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!195 &4703028490180230644
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1988563410076853048}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 1
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!114 &8280665204066829962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,7 +132,7 @@ MonoBehaviour:
   WayPointParent: {fileID: 0}
   nextPoint: 0
   difficulty: 0
-  agent: {fileID: 4703028490180230644}
+  agent: {fileID: 0}
   walkSpeed: 5
   runSpeed: 10
   attackRange: 0
