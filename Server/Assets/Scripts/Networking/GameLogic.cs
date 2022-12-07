@@ -42,7 +42,7 @@ public class GameLogic : MonoBehaviour
     [SerializeField] private GameObject enemyPrefab;
     #endregion
 
-  
+
     #endregion
 
     private void Awake()

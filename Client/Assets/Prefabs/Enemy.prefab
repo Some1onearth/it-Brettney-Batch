@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 4703028490180230644}
   - component: {fileID: 8280665204066829962}
   - component: {fileID: 3185392916798838635}
+  - component: {fileID: 3613366326292777715}
+  - component: {fileID: -2609229968072268726}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -161,3 +163,32 @@ MonoBehaviour:
   distanceToPoint: 0
   changePoint: 1
   stopFromPlayer: 0
+--- !u!114 &3613366326292777715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1988563410076853048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feab43a670893dc4586f3885ff7596ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeElapsed: 0
+  timeToReachTarget: 0.05
+  movementThreshhold: 0.05
+--- !u!114 &-2609229968072268726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1988563410076853048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9624db889b0683246bd4693a2bdf324d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interpolator: {fileID: 3613366326292777715}
+  _prefabEnemy: {fileID: 1988563410076853048}

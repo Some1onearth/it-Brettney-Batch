@@ -12,6 +12,7 @@ public enum ServerToClientId : ushort
     enemyPosition,
     enemyDeath,
     enemyID,
+    enemyMovement,
 
 }
 
@@ -21,7 +22,7 @@ public enum ClientToServerId : ushort  //Puts the enum outside of the class,
     //sets the value to 1, the default is 0
     name = 1,
     input,
-   
+
 }
 
 public class NetworkManager : MonoBehaviour
@@ -72,7 +73,7 @@ public class NetworkManager : MonoBehaviour
 
     private void Start()
     {
-        //  Application.targetFrameRate = 60;
+        Application.targetFrameRate = 60;
         //Logs what the network is doing
         RiptideLogger.Initialize(Debug.Log, Debug.Log, Debug.LogWarning, Debug.LogError, false);
         //Create new server
@@ -83,7 +84,7 @@ public class NetworkManager : MonoBehaviour
         //When a client leaves the server run the PlayerLeft function
         GameServer.ClientDisconnected += PlayerLeft;
 
-       // GameServer.Enemy
+        // GameServer.Enemy
     }
 
     //Checking server activity at set intervals
@@ -124,7 +125,7 @@ public class NetworkManager : MonoBehaviour
     #region EnemySpawnData 
     //public void InstaniateEnemy(Vector3 _position)//Spawns this on the server Side
     //{
-       
+
     //    Instantiate(_enemyPrefab, _position, Quaternion.identity);
     //}
 

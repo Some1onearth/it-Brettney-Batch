@@ -1,3 +1,4 @@
+using RiptideNetworking;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,7 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
+    private Room room;
     public NavMeshAgent enemy;
 
     public LayerMask whatIsGround;
@@ -13,7 +15,7 @@ public class Enemy : MonoBehaviour
     public Vector3 walkPoint;
     bool walkPointSet;
     public float walkPointRange;
-            
+
     private void Awake()
     {
         enemy = GetComponent<NavMeshAgent>();
@@ -34,7 +36,7 @@ public class Enemy : MonoBehaviour
         }
 
         Vector3 distanceToWalkPoint = transform.position - walkPoint;
-            
+
         //WalkPoint reached
         if (distanceToWalkPoint.magnitude < 1f)
         {
@@ -54,5 +56,24 @@ public class Enemy : MonoBehaviour
         {
             walkPointSet = true;
         }
+    }
+
+
+    private void SendMovement()
+    {
+        if (NetworkManager.NetworkManagerInstance.CurrentTick % 2 != 0)
+        {
+            return;
+        }
+        Message message = Message.Create(MessageSendMode.unreliable, ServerToClientId.enemyMovement);
+        message.AddUShort(room.EnemyId);
+        message.AddUShort(NetworkManager.NetworkManagerInstance.CurrentTick);
+
+        message.AddVector3(transform.position);
+        message.AddVector3(transform.forward);
+
+        NetworkManager.NetworkManagerInstance.GameServer.SendToAll(message);
+
+
     }
 }

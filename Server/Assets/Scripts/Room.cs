@@ -17,35 +17,33 @@ public class Room : MonoBehaviour
 
     #endregion
 
-    [SerializeField] private int _currentWave = 0, _maxWave = 3;
+    //    [SerializeField] private int _currentWave = 0, _maxWave = 3;
     [SerializeField] private bool _shouldSpawn;
     [SerializeField] private int _enemiesToSpawn;
     [SerializeField] private GameObject _enemyPrefab;
-    [SerializeField] private float _timer;
-    [SerializeField] private float _spawnDelay = 2f;
+
     [SerializeField] private ushort enemyReferenceID = 0;
 
 
     private void Start()
     {
         enemyReferenceID = 0;
-        SpawnEnemies();
+        //  SpawnEnemies();
     }
 
     private void Update()
     {
         if (_shouldSpawn)
         {
-            Debug.Log("Enemies Should Spawn");
-         //   _timer += Time.deltaTime;
-          //  if (_timer >= _spawnDelay)
-          //  {
-                SpawnEnemies();
             _shouldSpawn = false;
-              //  _timer = 0;
-           // }
+            Debug.Log("Enemies Should Spawn");
+
+            SpawnEnemies();
+            _shouldSpawn = false;
+
         }
     }
+
 
     private void SpawnEnemies()
     {
@@ -64,12 +62,12 @@ public class Room : MonoBehaviour
         list.Remove(EnemyId); //When an enemy is destroyed, Delete it from the list.
     }
 
-    public void Spawn(Vector3 pos)
+    public void Spawn(Vector3 position)
     {
-        Room enemy = Instantiate(GameLogic.GameLogicInstance.EnemyPrefab, new Vector3(pos.x, 1, pos.z), Quaternion.identity).GetComponent<Room>();
+        Room enemy = Instantiate(_enemyPrefab, new Vector3(position.x, 1, position.z), Quaternion.identity).GetComponent<Room>();
         enemy.EnemyId = enemyReferenceID;
-        enemy.EnemyPosition = pos;
-
+        // enemy.EnemyPosition = position;
+        enemyReferenceID++;
         enemy.SendSpawned();
         list.Add(enemyReferenceID, enemy);
         //  Instantiate(_enemyPrefab, new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10)), Quaternion.identity);
@@ -77,25 +75,6 @@ public class Room : MonoBehaviour
     }
 
 
-    #region OldCode
-    //public static void SpawnEnemy(ushort enemyid, Vector3 enemypos)
-    //{
-    //    foreach (Room otherenemy in list.Values) //
-    //        otherenemy.SendSpawned(enemyid);
-
-    //    Vector3 _position = new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10));
-    //    //Instantiates EnemyPrefab
-    //    Room enemy = Instantiate(GameLogic.GameLogicInstance.EnemyPrefab, new Vector3(_position.x, _position.y, _position.z), Quaternion.identity).GetComponent<Room>();
-    //    //Sets Enemy ID
-    //    enemy.EnemyId = enemyid;
-    //    enemy.EnemyPosition = _position;
-
-
-
-    //    enemy.SendSpawned();//Passes on the enemy values
-    //    list.Add(enemyid, enemy);
-    //}
-    #endregion
     private void SendSpawned()
     {
         NetworkManager.NetworkManagerInstance.GameServer.SendToAll(AddSpawnData(Message.Create(MessageSendMode.reliable, ServerToClientId.enemySpawned)));
@@ -105,30 +84,12 @@ public class Room : MonoBehaviour
     {
         NetworkManager.NetworkManagerInstance.GameServer.Send(AddSpawnData(Message.Create(MessageSendMode.reliable, ServerToClientId.enemySpawned)), toClientId);
     }
-
-
-
     private Message AddSpawnData(Message message)
     {
         message.AddUShort(EnemyId);
         message.AddVector3(transform.position);
         return message;
     }
-
-
-    //[MessageHandler((ushort)ClientToServerId.enemyID)]
-
-
-
-  
-    //private static void Position(ushort fromClientId, Message message)
-    //{
-    //    Spawn(fromClientId, message.GetVector3());
-    //}
-
-
-
-
     #endregion
 
 

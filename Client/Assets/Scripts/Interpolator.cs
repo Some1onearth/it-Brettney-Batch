@@ -35,14 +35,14 @@ public class Interpolator : MonoBehaviour
                 previous = to;
                 to = futureTransformUpdates[i];
                 from = new TransformUpdate(NetworkManager.NetworkManagerInstance.InterpolationTick, transform.position);
-
+                futureTransformUpdates.RemoveAt(i);
+                i--;
+                timeElapsed = 0f;
+                timeToReachTarget = (to.Tick - from.Tick) * Time.fixedDeltaTime;
             }
 
 
-            futureTransformUpdates.RemoveAt(i);
-            i--;
-            timeElapsed = 0f;
-            timeToReachTarget = (to.Tick - from.Tick) * Time.fixedDeltaTime;
+
         }
 
         timeElapsed += Time.deltaTime;
