@@ -66,7 +66,7 @@ public class Room : MonoBehaviour
 
     public void Spawn(Vector3 pos)
     {
-        Room enemy = Instantiate(GameLogic.GameLogicInstance.EnemyPrefab, new Vector3(pos.x, pos.y, pos.z), Quaternion.identity).GetComponent<Room>();
+        Room enemy = Instantiate(GameLogic.GameLogicInstance.EnemyPrefab, new Vector3(pos.x, 1, pos.z), Quaternion.identity).GetComponent<Room>();
         enemy.EnemyId = enemyReferenceID;
         enemy.EnemyPosition = pos;
 

@@ -21,7 +21,7 @@ public enum ClientToServerId : ushort  //Puts the enum outside of the class,
     //sets the value to 1, the default is 0
     name = 1,
     input,
-    enemyID,
+   
 }
 
 public class NetworkManager : MonoBehaviour
