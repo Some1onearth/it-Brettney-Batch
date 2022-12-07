@@ -973,6 +973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00542d3d0de0bfc46bf39b01e055b5be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _enemyPrefab: {fileID: 0}
   s_port: 7778
   s_maxClientCount: 10
 --- !u!4 &591457895
@@ -1003,6 +1004,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 5558579300215823256, guid: f305820ee02495d4cb1e5b8227be9865, type: 3}
+  enemyPrefab: {fileID: 1988563410076853048, guid: f5e2d2805028082449a8d5b7063a5bf4, type: 3}
 --- !u!43 &627101520
 Mesh:
   m_ObjectHideFlags: 0
