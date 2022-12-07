@@ -15,7 +15,7 @@ C:/Users/katsu/Desktop/Tafe Diploma 2.0/it-Brettney-Batch/Client
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-59385
+59402
 Successfully changed project path to: C:/Users/katsu/Desktop/Tafe Diploma 2.0/it-Brettney-Batch/Client
 C:/Users/katsu/Desktop/Tafe Diploma 2.0/it-Brettney-Batch/Client
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Users/katsu/Desktop/Tafe Diploma 2.0/it-Brettney-Batch/Client
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 31.57 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 28.19 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.8f1 (b30333d56e81)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.8f1/Editor/Data/Resources/UnitySubsystems
@@ -63,39 +63,39 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.8f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.8f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56548
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56264
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.8f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.004380 seconds.
+Registered in 0.003770 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 33.94 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 29.22 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.473 seconds
+- Completed reload, in  0.454 seconds
 Domain Reload Profiling:
-	ReloadAssembly (473ms)
-		BeginReloadAssembly (58ms)
+	ReloadAssembly (454ms)
+		BeginReloadAssembly (52ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (329ms)
-			LoadAssemblies (56ms)
+		EndReloadAssembly (322ms)
+			LoadAssemblies (51ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
 			SetupTypeCache (80ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (22ms)
-			SetupLoadedEditorAssemblies (190ms)
+			RebuildScriptCaches (21ms)
+			SetupLoadedEditorAssemblies (185ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (42ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (34ms)
+				RefreshPlugins (29ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (78ms)
+				ProcessInitializeOnLoadAttributes (76ms)
 				ProcessInitializeOnLoadMethodAttributes (36ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
@@ -103,36 +103,36 @@ Domain Reload Profiling:
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.003039 seconds.
+Registered in 0.002718 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 0.38 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.41 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.842 seconds
+- Completed reload, in  0.837 seconds
 Domain Reload Profiling:
-	ReloadAssembly (843ms)
-		BeginReloadAssembly (195ms)
+	ReloadAssembly (837ms)
+		BeginReloadAssembly (190ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (128ms)
-		EndReloadAssembly (560ms)
+			CreateAndSetChildDomain (126ms)
+		EndReloadAssembly (563ms)
 			LoadAssemblies (53ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (138ms)
+			SetupTypeCache (134ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (36ms)
-			SetupLoadedEditorAssemblies (308ms)
+			RebuildScriptCaches (35ms)
+			SetupLoadedEditorAssemblies (310ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (10ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (46ms)
-				ProcessInitializeOnLoadAttributes (226ms)
-				ProcessInitializeOnLoadMethodAttributes (21ms)
+				BeforeProcessingInitializeOnLoad (44ms)
+				ProcessInitializeOnLoadAttributes (225ms)
+				ProcessInitializeOnLoadMethodAttributes (27ms)
 				AfterProcessingInitializeOnLoad (5ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
@@ -146,7 +146,7 @@ Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2137 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 83 unused Assets / (110.3 KB). Loaded Objects now: 2599.
 Memory consumption went from 93.8 MB to 93.7 MB.
-Total: 3.152100 ms (FindLiveObjects: 0.173400 ms CreateObjectMapping: 0.048500 ms MarkObjects: 2.730000 ms  DeleteObjects: 0.199300 ms)
+Total: 2.610200 ms (FindLiveObjects: 0.156300 ms CreateObjectMapping: 0.042700 ms MarkObjects: 2.254800 ms  DeleteObjects: 0.155600 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -160,137 +160,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 43950.611794 seconds.
-  path: Assets/Art/Lite Magic Pack/Standing 2H Magic Area Attack 02.fbx
-  artifactKey: Guid(eee1815c2e0ac86408350c7268a8dbd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Lite Magic Pack/Standing 2H Magic Area Attack 02.fbx using Guid(eee1815c2e0ac86408350c7268a8dbd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5664ad4ab445a87d031253d0450081bc') in 0.059316 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Art/Lite Magic Pack/Standing React Small From Front.fbx
-  artifactKey: Guid(c908a4e7f9d5dd642a89bec1c0f9db4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Lite Magic Pack/Standing React Small From Front.fbx using Guid(c908a4e7f9d5dd642a89bec1c0f9db4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10edd0044d3ed4e9313f4311f2b8fd4e') in 0.015431 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 31.699977 seconds.
-  path: Assets/Art/Pro Longbow Pack/fall a loop.fbx
-  artifactKey: Guid(fe3ecb99b81fc5d4aba31a4e84abc9ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Pro Longbow Pack/fall a loop.fbx using Guid(fe3ecb99b81fc5d4aba31a4e84abc9ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76832ee09a6ba23e1e684f6b407d6dce') in 0.019897 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Art/Pro Longbow Pack/standing run left.fbx
-  artifactKey: Guid(7afefbc1102d4954d92a6a69ff1589e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Pro Longbow Pack/standing run left.fbx using Guid(7afefbc1102d4954d92a6a69ff1589e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e0d7d411c7a7d85b0695fb1384db28d') in 0.016191 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Art/Pro Longbow Pack/standing melee kick.fbx
-  artifactKey: Guid(ccc97bd7956f2da488f617b7f8e2ef27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Pro Longbow Pack/standing melee kick.fbx using Guid(ccc97bd7956f2da488f617b7f8e2ef27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba922b7b223dc4d56ffc8739d11b328b') in 0.015675 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/Art/Pro Longbow Pack/standing draw arrow.fbx
-  artifactKey: Guid(70d843ef3bc971147a626077104b8eac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Pro Longbow Pack/standing draw arrow.fbx using Guid(70d843ef3bc971147a626077104b8eac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81a6d13f12dcfb336c4358211a8fab32') in 0.015837 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/Art/Pro Longbow Pack/standing dodge backward.fbx
-  artifactKey: Guid(13b56a6eeb572214ca5ca5d89dd5e6b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Pro Longbow Pack/standing dodge backward.fbx using Guid(13b56a6eeb572214ca5ca5d89dd5e6b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c19f5f73bbf25ab9fe9c7f028a82eeb') in 0.016817 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Art/Pro Longbow Pack/standing react small from front.fbx
-  artifactKey: Guid(a32b2ee9b1c4b95409aa68bd2a3d17b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Pro Longbow Pack/standing react small from front.fbx using Guid(a32b2ee9b1c4b95409aa68bd2a3d17b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69331dab0fe9c58df4e686bb269d5733') in 0.016644 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Art/Pro Longbow Pack/standing run right.fbx
-  artifactKey: Guid(243450c955131f74f81f9a1f150eb1b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Pro Longbow Pack/standing run right.fbx using Guid(243450c955131f74f81f9a1f150eb1b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed732ab1899524c498c6c9c26c4324ba') in 0.015789 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Art/Pro Longbow Pack/standing dodge left.fbx
-  artifactKey: Guid(7425251fedb8b8b44bd2ad270921b1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Pro Longbow Pack/standing dodge left.fbx using Guid(7425251fedb8b8b44bd2ad270921b1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b356fb4b8b1d5262a3596c0027c68d9a') in 0.015645 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Art/Pro Longbow Pack/unarmed idle 01.fbx
-  artifactKey: Guid(63d30404693069347b91df8e27cfbd26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Pro Longbow Pack/unarmed idle 01.fbx using Guid(63d30404693069347b91df8e27cfbd26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12a36747c8c915a1d0a819fde865c8c3') in 0.017614 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Art/Pro Longbow Pack/standing aim walk forward.fbx
-  artifactKey: Guid(fab2f15588250974192a412ac53a4ca2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Pro Longbow Pack/standing aim walk forward.fbx using Guid(fab2f15588250974192a412ac53a4ca2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7d49a62dca231c9784196420d3025c7') in 0.015788 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Art/Pro Longbow Pack/standing react small from headshot.fbx
-  artifactKey: Guid(0304830a24b9010419b12e7c10f8b2dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Pro Longbow Pack/standing react small from headshot.fbx using Guid(0304830a24b9010419b12e7c10f8b2dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b1b48b1ba2fde7fcad0dfab599a3622') in 0.013944 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 21.507332 seconds.
-  path: Assets/Art/Sword and Shield Pack/sword and shield 180 turn (2).fbx
-  artifactKey: Guid(4a1b2f725f5abbb48aa24e295cf99bf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Sword and Shield Pack/sword and shield 180 turn (2).fbx using Guid(4a1b2f725f5abbb48aa24e295cf99bf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fc1355675c2985201423d61bbc0c80f') in 0.016587 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Art/Sword and Shield Pack/sword and shield crouch block (2).fbx
-  artifactKey: Guid(933ace5f06f06d545a4a88666edec932) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Sword and Shield Pack/sword and shield crouch block (2).fbx using Guid(933ace5f06f06d545a4a88666edec932) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f804f5ad9e95ff47549d60c299b74d09') in 0.017534 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Art/Sword and Shield Pack/sword and shield crouch.fbx
-  artifactKey: Guid(1f8daed1d0c6ffc4ba9dfaef8531fec1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Sword and Shield Pack/sword and shield crouch.fbx using Guid(1f8daed1d0c6ffc4ba9dfaef8531fec1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cde02f5501ed3d5a2ba39737857e1047') in 0.016061 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Art/Sword and Shield Pack/sword and shield idle (3).fbx
-  artifactKey: Guid(a9a51541bd9ab704282cb0d72618227a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Sword and Shield Pack/sword and shield idle (3).fbx using Guid(a9a51541bd9ab704282cb0d72618227a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94c45620a2c242736bb134ae5559e7ba') in 0.014882 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Art/Sword and Shield Pack/sword and shield turn (2).fbx
-  artifactKey: Guid(9e4183cfbc7bb1c4383e16d2e9806407) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Sword and Shield Pack/sword and shield turn (2).fbx using Guid(9e4183cfbc7bb1c4383e16d2e9806407) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94893d29e4a18beb0b863264b209f8c5') in 0.015489 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Art/Sword and Shield Pack/sword and shield crouching (3).fbx
-  artifactKey: Guid(7020d5466df632648893f22fdcbb5633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Sword and Shield Pack/sword and shield crouching (3).fbx using Guid(7020d5466df632648893f22fdcbb5633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21dd22ed626bba7ee080e16cd23bc3ac') in 0.015035 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Art/Sword and Shield Pack/sword and shield crouch block idle.fbx
-  artifactKey: Guid(befe92b5fce5cea4f9df25c199cfc6b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Sword and Shield Pack/sword and shield crouch block idle.fbx using Guid(befe92b5fce5cea4f9df25c199cfc6b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69572332a359ca6f4c2fc4be52b83ec1') in 0.014934 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Art/Sword and Shield Pack/sword and shield slash (3).fbx
-  artifactKey: Guid(bb82887e0e6aaed49af63911afa57914) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Sword and Shield Pack/sword and shield slash (3).fbx using Guid(bb82887e0e6aaed49af63911afa57914) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3e8ed80c28bf32303d1b3ee6d47202f') in 0.017428 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Art/Sword and Shield Pack/sword and shield kick.fbx
-  artifactKey: Guid(e65df7ef0ecc8d1429ecec34654b5f05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Sword and Shield Pack/sword and shield kick.fbx using Guid(e65df7ef0ecc8d1429ecec34654b5f05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db5134192e0ca418ca28ed4626056293') in 0.014756 seconds 
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0
+  Time since last request: 44392.323941 seconds.
+  path: Assets/Art/Great Sword Pack/Maria WProp J J Ong - Animation Controllers.controller
+  artifactKey: Guid(a3099714fed890149b8c4764bf3a0e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Great Sword Pack/Maria WProp J J Ong - Animation Controllers.controller using Guid(a3099714fed890149b8c4764bf3a0e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bba9c055c747e903136bcaf25b0bf8d') in 0.023362 seconds 
