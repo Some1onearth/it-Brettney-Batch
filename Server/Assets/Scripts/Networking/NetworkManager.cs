@@ -8,8 +8,11 @@ public enum ServerToClientId : ushort
     sync = 1,
     playerSpawned,
     playerMovement,
-    bullet,
-    bulletspawned,
+    enemySpawned,
+    enemyPosition,
+    enemyDeath,
+    enemyID,
+
 }
 
 
@@ -18,6 +21,7 @@ public enum ClientToServerId : ushort  //Puts the enum outside of the class,
     //sets the value to 1, the default is 0
     name = 1,
     input,
+    enemyID,
 }
 
 public class NetworkManager : MonoBehaviour
@@ -28,6 +32,7 @@ public class NetworkManager : MonoBehaviour
     and a public static Property to control the instance.
      */
     #region Variables
+    [SerializeField] private GameObject _enemyPrefab; //This is the enemy PREFAB that is used to spawn
     private static NetworkManager _networkManagerInstance;
 
     #endregion
@@ -77,6 +82,8 @@ public class NetworkManager : MonoBehaviour
 
         //When a client leaves the server run the PlayerLeft function
         GameServer.ClientDisconnected += PlayerLeft;
+
+       // GameServer.Enemy
     }
 
     //Checking server activity at set intervals
@@ -112,4 +119,19 @@ public class NetworkManager : MonoBehaviour
         message.Add(CurrentTick);
         GameServer.SendToAll(message);
     }
+
+
+    #region EnemySpawnData 
+    //public void InstaniateEnemy(Vector3 _position)//Spawns this on the server Side
+    //{
+       
+    //    Instantiate(_enemyPrefab, _position, Quaternion.identity);
+    //}
+
+    private void EnemyDied(object sender, ClientDisconnectedEventArgs e)
+    {
+        Destroy(EnemyHandler.list[e.Id].gameObject);
+    }
+
+    #endregion
 }

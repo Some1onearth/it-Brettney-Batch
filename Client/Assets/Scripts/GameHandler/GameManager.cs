@@ -101,9 +101,9 @@ public class GameManager : MonoBehaviour
 
     public void Currency()
     {
-        currentCurrency = currentScore / 10;
-        currencyText.text = "" + currentCurrency;
-        PlayerPrefs.SetInt("Currency", currentCurrency);
+        //currentCurrency = currentScore / 10;
+        //currencyText.text = "" + currentCurrency;
+        //PlayerPrefs.SetInt("Currency", currentCurrency);
     }
 
     public void Spend(int price)
