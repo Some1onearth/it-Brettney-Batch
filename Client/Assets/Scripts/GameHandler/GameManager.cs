@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
        
 
         curLevelText.text = "Stage: " + _curLevel;
-        Currency();
+        Currency(); // updates currency constantly.
     }
 
 
@@ -92,7 +92,7 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void AddScore()
+    public void AddScore() // reference this within hitcollision code when adding score
     {
         currentScore += addScore;
         scoreText.text = "" + currentScore;
