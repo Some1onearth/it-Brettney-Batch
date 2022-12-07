@@ -5,16 +5,6 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
-
-    #region Network Variables
-    public static int maxEnemies = 10;
-    public static Dictionary<int, Enemy> enemies = new Dictionary<int, Enemy>();
-    private static int nextEnemyId = 1;
-
-    public int id;
-
-    #endregion
-
     public NavMeshAgent enemy;
 
     public LayerMask whatIsGround;
@@ -23,23 +13,7 @@ public class Enemy : MonoBehaviour
     public Vector3 walkPoint;
     bool walkPointSet;
     public float walkPointRange;
-
-
-    #region Networking Functions
-    private void Start()
-    {
-        id = nextEnemyId;
-        nextEnemyId++;
-        enemies.Add(id, this);
-
-
-
-
-    }
-
-
-
-    #endregion
+            
     private void Awake()
     {
         enemy = GetComponent<NavMeshAgent>();
@@ -60,7 +34,7 @@ public class Enemy : MonoBehaviour
         }
 
         Vector3 distanceToWalkPoint = transform.position - walkPoint;
-
+            
         //WalkPoint reached
         if (distanceToWalkPoint.magnitude < 1f)
         {
