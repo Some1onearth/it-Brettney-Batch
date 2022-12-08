@@ -415,7 +415,6 @@ GameObject:
   - component: {fileID: 2664987052517972418}
   - component: {fileID: 1973707392846316128}
   - component: {fileID: 1886855971558116417}
-  - component: {fileID: 4589179089241383850}
   m_Layer: 0
   m_Name: LocalPlayer
   m_TagString: Player
@@ -456,7 +455,6 @@ MonoBehaviour:
   model: {fileID: 4276383331403744923}
   animationManager: {fileID: 1886855971558116417}
   camTransform: {fileID: 4782615100965492034}
-  interpolator: {fileID: 4589179089241383850}
 --- !u!114 &2664987052517972418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -477,7 +475,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5976996778502043199}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1e52f17538218bc4f9fb826b1ea7a903, type: 3}
   m_Name: 
@@ -499,18 +497,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 3631547159506908985}
   playerMoveSpeed: 5
---- !u!114 &4589179089241383850
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5976996778502043199}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: feab43a670893dc4586f3885ff7596ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeElapsed: 0
-  timeToReachTarget: 0.05
-  movementThreshhold: 0.05

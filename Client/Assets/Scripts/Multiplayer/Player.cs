@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] private PlayerAnimationManager animationManager;
     [SerializeField] private Transform camTransform;
-    [SerializeField] private Interpolator interpolator;
+  //  [SerializeField] private Interpolator interpolator;
 
     private string username;
 
@@ -28,8 +28,8 @@ public class Player : MonoBehaviour
 
     private void Move(ushort tick, Vector3 newPosition, Vector3 forward)
     {
-        interpolator.NewUpdate(tick, newPosition);
-        //transform.position = newPosition;
+       // interpolator.NewUpdate(tick, newPosition);
+        transform.position = newPosition;
 
 
         model.transform.forward = forward;
@@ -64,8 +64,6 @@ public class Player : MonoBehaviour
     }
 
     [MessageHandler((ushort)ServerToClientId.playerSpawned)]
-
-
     private static void SpawnPlayer(Message message)
     {
         Spawn(message.GetUShort(), message.GetString(), message.GetVector3());

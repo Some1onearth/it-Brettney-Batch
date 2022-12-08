@@ -69,10 +69,6 @@ public class Player : MonoBehaviour
 
 
     [MessageHandler((ushort)ClientToServerId.name)]
-
-
-
-    //  [MessageHandler((ushort)ClientToServerId.name)]
     private static void Name(ushort fromClientId, Message message)
     {
         Spawn(fromClientId, message.GetString()); 

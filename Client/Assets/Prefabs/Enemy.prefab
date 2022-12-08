@@ -12,9 +12,6 @@ GameObject:
   - component: {fileID: 7738772903104211715}
   - component: {fileID: 1147219191496908167}
   - component: {fileID: 192322047363451207}
-  - component: {fileID: 8280665204066829962}
-  - component: {fileID: 3185392916798838635}
-  - component: {fileID: 3613366326292777715}
   - component: {fileID: -2609229968072268726}
   m_Layer: 0
   m_Name: Enemy
@@ -102,61 +99,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8280665204066829962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1988563410076853048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93345b318014c0848bea18f2b7c514d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &3185392916798838635
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1988563410076853048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80d56750be774d6468f937ee9f857bcc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  state: 0
-  target: {fileID: 0}
-  player: {fileID: 0}
-  wayPointPrefab: {fileID: 7707853181165948495, guid: 56cb687ffff03644396edde8bcb2a08d, type: 3}
-  WayPointParent: {fileID: 0}
-  wayPointSpawnParent: {fileID: 0}
-  nextPoint: 0
-  difficulty: 0
-  agent: {fileID: 0}
-  walkSpeed: 5
-  runSpeed: 10
-  attackRange: 0
-  sightRange: 0
-  distanceToPoint: 0
-  changePoint: 1
-  stopFromPlayer: 0
---- !u!114 &3613366326292777715
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1988563410076853048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: feab43a670893dc4586f3885ff7596ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeElapsed: 0
-  timeToReachTarget: 0.05
-  movementThreshhold: 0.05
 --- !u!114 &-2609229968072268726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,5 +111,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9624db889b0683246bd4693a2bdf324d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interpolator: {fileID: 3613366326292777715}
   _prefabEnemy: {fileID: 1988563410076853048}
+  model: {fileID: 1988563410076853048}

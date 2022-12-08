@@ -7,14 +7,15 @@ public class Room : MonoBehaviour
 {
     #region Network Spawn Variables
     public static Dictionary<ushort, Room> list = new Dictionary<ushort, Room>(); //creates lsit of all the enemies
-
+   
     public ushort EnemyId { get; private set; }
     public Vector3 EnemyPosition { get; private set; }
 
-    public Enemy EnemyValue => enemy;
+    public EnemyMovement EnemyValue => room;
 
-    [SerializeField] private Enemy enemy;
+    [SerializeField] private EnemyMovement room;
 
+  
     #endregion
 
     //    [SerializeField] private int _currentWave = 0, _maxWave = 3;
@@ -25,6 +26,10 @@ public class Room : MonoBehaviour
     [SerializeField] private ushort enemyReferenceID = 0;
 
 
+    private void Awake()
+    {
+        
+    }
     private void Start()
     {
         enemyReferenceID = 0;
@@ -47,7 +52,7 @@ public class Room : MonoBehaviour
 
     private void SpawnEnemies()
     {
-        for (int i = 0; i <= _enemiesToSpawn; i++)
+        for (int i = 0; i < _enemiesToSpawn; i++)
         {
             Vector3 _position = new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10));
             Spawn(_position);
@@ -70,8 +75,6 @@ public class Room : MonoBehaviour
         enemyReferenceID++;
         enemy.SendSpawned();
         list.Add(enemyReferenceID, enemy);
-        //  Instantiate(_enemyPrefab, new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10)), Quaternion.identity);
-
     }
 
 
@@ -90,6 +93,10 @@ public class Room : MonoBehaviour
         message.AddVector3(transform.position);
         return message;
     }
+  
+
+
+
     #endregion
 
 

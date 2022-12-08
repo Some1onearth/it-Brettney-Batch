@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     private bool[] inputs;
     private float yVelocity;
 
-    
+
 
 
 
@@ -78,9 +78,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
         Move(inputDirection, inputs[4], inputs[5]);
-
-       
-
     }
 
     private void Initialize()
@@ -94,11 +91,9 @@ public class PlayerMovement : MonoBehaviour
     private void Move(Vector2 inputDirection, bool jump, bool sprint)
     {
 
-//       Set the player's forward rotation to the inputDirection (what way the character is facing)
-//       Make the player Move forward regardless while input is being used.
-//       
-      
-if (inputDirection.magnitude>0)
+        //       Set the player's forward rotation to the inputDirection (what way the character is facing)
+        //       Make the player Move forward regardless while input is being used.
+        if (inputDirection.magnitude > 0)
         {
             Vector3 lookDirection = new Vector3(inputDirection.x, 0, inputDirection.y);
             transform.forward = lookDirection;
@@ -159,7 +154,7 @@ if (inputDirection.magnitude>0)
 
         message.AddVector3(transform.position);
         message.AddVector3(transform.forward);
-      
+
         NetworkManager.NetworkManagerInstance.GameServer.SendToAll(message);
 
 

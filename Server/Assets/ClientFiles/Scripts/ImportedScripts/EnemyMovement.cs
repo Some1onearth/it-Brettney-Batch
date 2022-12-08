@@ -1,3 +1,4 @@
+using RiptideNetworking;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,8 @@ using UnityEngine.AI;
 
 public class EnemyMovement : MonoBehaviour
 {
+    public static Room room;
+
     public enum AIStates
     {
         Patrol,
@@ -12,7 +15,6 @@ public class EnemyMovement : MonoBehaviour
     }
     public AIStates state;
     public Transform target;
-    public Transform player;
     public GameObject wayPointPrefab;
     public Transform WayPointParent;
     public Transform wayPointSpawnParent;
@@ -21,7 +23,18 @@ public class EnemyMovement : MonoBehaviour
     public NavMeshAgent agent;
     public float walkSpeed, runSpeed, attackRange, sightRange;
     public float distanceToPoint, changePoint;
-    public float stopFromPlayer;
+    // public float stopFromPlayer;
+
+    private void OnValidate()
+    {
+       
+        if (room == null)
+        {
+            room = GetComponent<Room>();
+        }
+
+
+    }
     public void Start()
     {
 
@@ -41,8 +54,10 @@ public class EnemyMovement : MonoBehaviour
     }
     public void Update()
     {
+       // SendMovement();
+        Debug.Log("Patrol");
         Patrol();
-        //Seek();
+
     }
     void Patrol()
     {
@@ -70,21 +85,29 @@ public class EnemyMovement : MonoBehaviour
                 nextPoint = 1;
             }
         }
+        Debug.Log("Sending Movement");
+       SendMovement();
     }
-    void Seek()
+
+
+
+
+    private void SendMovement()
     {
-        //if the player is out of our sight range and inside our attack range
-        if (Vector3.Distance(player.position, transform.position) > sightRange || Vector3.Distance(player.position, transform.position) < attackRange)
+        Debug.Log("Movement Send Method");
+        if (NetworkManager.NetworkManagerInstance.CurrentTick % 2 != 0)
         {
-            //stop seeking
             return;
         }
+        Message message = Message.Create(MessageSendMode.unreliable, ServerToClientId.enemyMovement);
+        message.AddUShort(room.EnemyId);
+        message.AddUShort(NetworkManager.NetworkManagerInstance.CurrentTick);
 
-        //Set AI state
-        state = AIStates.Seek;
-        //change speed??? up to you
-        agent.speed = runSpeed;
-        //Target is player
-        agent.destination = player.position;
+        message.AddVector3(transform.position);
+        message.AddVector3(transform.forward);
+
+        NetworkManager.NetworkManagerInstance.GameServer.SendToAll(message);
+        Debug.Log("Movement Sent");
+
     }
 }

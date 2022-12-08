@@ -79,10 +79,10 @@ public class GameManager : MonoBehaviour
     private void NewLevel()
     {
 
-        _curLevel++;
-        _maxMobCount += _curLevel;
-        _curMobCount = _maxMobCount;
-        HowManyToSpawn(_maxMobCount);
+        //_curLevel++;
+        //_maxMobCount += _curLevel;
+        //_curMobCount = _maxMobCount;
+        //HowManyToSpawn(_maxMobCount);
        
     }
     private void PostGameScreen()

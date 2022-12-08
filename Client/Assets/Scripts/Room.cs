@@ -10,14 +10,16 @@ public class Room : MonoBehaviour
     public ushort EnemyId { get; private set; }
     public Vector3 EnemyPosition { get; private set; }
 
-    [SerializeField] private Interpolator interpolator;
+   // [SerializeField] private Interpolator interpolator;
     // [SerializeField] private PlayerAnimationManager animationManager;
     #endregion
     [SerializeField] private static GameObject _enemyPrefab;
     public GameObject _prefabEnemy;
+    [SerializeField] private GameObject model;
     private void Start()
     {
         _enemyPrefab = _prefabEnemy;
+        model = this.gameObject;
     }
     #region Network Methods
     private void OnDestroy()
@@ -26,9 +28,13 @@ public class Room : MonoBehaviour
     }
     private void Move(ushort tick, Vector3 newPosition, Vector3 forward)
     {
-        interpolator.NewUpdate(tick, newPosition);
+        Debug.Log(newPosition+"New Position");
+        transform.position = newPosition;
+       // transform.position = newPosition;
+        // interpolator.NewUpdate(tick, newPosition);
         _enemyPrefab.transform.forward = forward;
-        //  animationManager.AnimatedBasedOnSpeed();
+    
+         // animationManager.AnimatedBasedOnSpeed();
     }
     public static void Spawn(ushort id, Vector3 position)
     {
@@ -39,12 +45,11 @@ public class Room : MonoBehaviour
     }
 
     [MessageHandler((ushort)ServerToClientId.enemySpawned)]
-
-
     private static void SpawnEnemy(Message message)
     {
         Spawn(message.GetUShort(), message.GetVector3());
     }
+
 
     [MessageHandler((ushort)ServerToClientId.enemyMovement)]
     private static void EnemyMovement(Message message)
@@ -52,8 +57,14 @@ public class Room : MonoBehaviour
         if (list.TryGetValue(message.GetUShort(), out Room room))
         {
             room.Move(message.GetUShort(), message.GetVector3(), message.GetVector3());
+            Debug.Log("Recieved enemymovement");
+            
         }
     }
+
+
+
+ 
 
 
     #endregion

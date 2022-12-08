@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 1147219191496908167}
   - component: {fileID: 192322047363451207}
   - component: {fileID: 4703028490180230644}
-  - component: {fileID: 8280665204066829962}
   - component: {fileID: 3185392916798838635}
+  - component: {fileID: 5746212385326591697}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -123,18 +123,6 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &8280665204066829962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1988563410076853048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93345b318014c0848bea18f2b7c514d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3185392916798838635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,7 +137,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   target: {fileID: 0}
-  player: {fileID: 0}
   wayPointPrefab: {fileID: 7707853181165948495, guid: 56cb687ffff03644396edde8bcb2a08d, type: 3}
   WayPointParent: {fileID: 0}
   wayPointSpawnParent: {fileID: 0}
@@ -162,4 +149,20 @@ MonoBehaviour:
   sightRange: 0
   distanceToPoint: 0
   changePoint: 1
-  stopFromPlayer: 0
+--- !u!114 &5746212385326591697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1988563410076853048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13445774049468f44a469f2b4a2c34a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  room: {fileID: 0}
+  _shouldSpawn: 0
+  _enemiesToSpawn: 1
+  _enemyPrefab: {fileID: 1988563410076853048}
+  enemyReferenceID: 0
