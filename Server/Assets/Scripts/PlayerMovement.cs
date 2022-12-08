@@ -8,7 +8,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
+    public static Room room;
     [SerializeField] private Player player;
     [SerializeField] private CharacterController controller;
     [SerializeField] private Transform camProxy;
@@ -39,6 +39,10 @@ public class PlayerMovement : MonoBehaviour
         {
             player = GetComponent<Player>();
         }
+
+
+       
+
 
 
 
@@ -169,18 +173,28 @@ public class PlayerMovement : MonoBehaviour
             if (hit.gameObject.CompareTag("Enemy"))//We will send a message to the client containing what enemy was hit, and the new player Score.
             {
                 Debug.Log("Collission with Enemy");
-                //When we want to send a message, we need to create the message using the sendmond and also what is the message Type(In this case collision)
-                //Then we need to add all the values that we are passing through, for this we are passing through the score that the player will get
-                //Message message = Message.Create(MessageSendMode.reliable, (ushort)ServerToClientId.collision); //Creates the message
-                //message.AddInt(score);//Sends this value of how much score the player gets.
-                //message.AddInt(enemyId); //Sends the ID of the enemy.
+              
+                    room = hit.collider.GetComponent<Room>();
+              
 
-                //NetworkManager.NetworkManagerInstance.GameServer.SendToAll(message);//Sends this message to all clients
 
-                Destroy(hit.gameObject); //destroys this object
-
+                Destroy(hit.gameObject);
+                EnemyDead();
             }
         }
+    }
+
+    private void EnemyDead()
+    {
+        Debug.Log("Trying to run enemydead function");
+        
+        Message message = Message.Create(MessageSendMode.reliable, ServerToClientId.enemyDeath);
+        message.AddUShort(room.EnemyId);
+        message.AddUShort(NetworkManager.NetworkManagerInstance.CurrentTick);
+        
+        NetworkManager.NetworkManagerInstance.GameServer.SendToAll(message);
+        Debug.Log("EnemyDead message sent");
+
     }
 
 }

@@ -6,8 +6,8 @@ using UnityEngine.AI;
 
 public class EnemyMovement : MonoBehaviour
 {
+    public ushort EnemyId { get;  set; }
     public static Room room;
-
     public enum AIStates
     {
         Patrol,
@@ -24,20 +24,18 @@ public class EnemyMovement : MonoBehaviour
     public float walkSpeed, runSpeed, attackRange, sightRange;
     public float distanceToPoint, changePoint;
     // public float stopFromPlayer;
+    private ushort internalID;
 
     private void OnValidate()
     {
-       
         if (room == null)
         {
             room = GetComponent<Room>();
         }
-
-
     }
     public void Start()
     {
-
+        internalID = EnemyId;
         wayPointSpawnParent = GameObject.Find("EnemyWaypoints").transform;
         //Instantiate waypoints for the enemy on start
         GameObject spawnedWaypoints = Instantiate(wayPointPrefab, transform.position, Quaternion.identity, wayPointSpawnParent);
@@ -54,10 +52,9 @@ public class EnemyMovement : MonoBehaviour
     }
     public void Update()
     {
-       // SendMovement();
+        // SendMovement();
         Debug.Log("Patrol");
         Patrol();
-
     }
     void Patrol()
     {
@@ -85,8 +82,8 @@ public class EnemyMovement : MonoBehaviour
                 nextPoint = 1;
             }
         }
-        Debug.Log("Sending Movement");
-       SendMovement();
+       // Debug.Log("Sending Movement");
+        SendMovement();
     }
 
 
@@ -94,20 +91,14 @@ public class EnemyMovement : MonoBehaviour
 
     private void SendMovement()
     {
-        Debug.Log("Movement Send Method");
-        if (NetworkManager.NetworkManagerInstance.CurrentTick % 2 != 0)
-        {
-            return;
-        }
+        //if (NetworkManager.NetworkManagerInstance.CurrentTick % 2 != 0)
+        //{
+        //    return;
+        //}
         Message message = Message.Create(MessageSendMode.unreliable, ServerToClientId.enemyMovement);
-        message.AddUShort(room.EnemyId);
+        message.AddString(internalID+"|"+transform.position+"|"+transform.forward);
         message.AddUShort(NetworkManager.NetworkManagerInstance.CurrentTick);
-
-        message.AddVector3(transform.position);
-        message.AddVector3(transform.forward);
-
         NetworkManager.NetworkManagerInstance.GameServer.SendToAll(message);
-        Debug.Log("Movement Sent");
-
+        Debug.Log(internalID + "|" + transform.position + "|" + transform.forward);
     }
 }

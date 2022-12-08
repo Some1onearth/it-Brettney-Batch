@@ -1,34 +1,47 @@
+using RiptideNetworking;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyHandler : MonoBehaviour
 {
-    public GameObject enemyMob;
-    public int enemySpawnCount = 0;
+    public static Dictionary<ushort, Transform> enemylist = new Dictionary<ushort, Transform>();
+
+    public ushort EnemyId { get; set; }
+
+    private ushort internalID;
 
 
-    public void HowManyToSpawn(int spawnvalue)
+    private void Start()
     {
-        enemySpawnCount = spawnvalue;
-
-        for (int i = 0; i <= enemySpawnCount; i++)
-        {
-            SpawnEnemy();
-        }
-
-
-    }
-
-    public void SpawnEnemy()
-    {
-        Instantiate(enemyMob);
+        internalID = EnemyId;
     }
 
 
 
 
+    //public void Move(string message)
+    //{
 
+    //    for (int i = 0; i < enemylist.Count; i++)
+    //    {
+    //        enemylist[id].transform.position = newPosition;
+    //        enemylist[id].transform.forward = forward;
+    //    }
+    //    Debug.Log(EnemyId);
+       
+    //}
+
+
+
+    //[MessageHandler((ushort)ServerToClientId.enemyMovement)]
+    //public static void EnemyMovement(Message message)
+    //{
+    //    if (list.TryGetValue(message.GetString(), out EnemyHandler enemyHandler))
+    //    {
+    //        enemyHandler.Move(message.GetString());
+    //    }
+    //}
 
 
 }

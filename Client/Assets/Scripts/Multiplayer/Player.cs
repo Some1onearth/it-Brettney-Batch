@@ -78,5 +78,23 @@ public class Player : MonoBehaviour
         }
     }
 
+    
+
+    //private void OnCollisionEnter(Collision collider)
+    //{
+        
+
+    //        Debug.Log("Collission with something>");
+    //        if (collider.collider.CompareTag("Enemy"))//We will send a message to the client containing what enemy was hit, and the new player Score.
+    //        {
+    //            Debug.Log("Collission with Enemy");
+
+
+    //            Destroy(collider.gameObject);
+
+    //        }
+       
+    //}
+
 
 }

@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
 
 
      */
-
+    public static int score;
     [SerializeField] private GameObject[] roomDoor;
     [SerializeField] private Button readyButton;
     [SerializeField] private Text curMobText;
@@ -92,11 +92,9 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void AddScore() // reference this within hitcollision code when adding score
+    public static void AddScore() // reference this within hitcollision code when adding score
     {
-        currentScore += addScore;
-        scoreText.text = "" + currentScore;
-        PlayerPrefs.SetInt("Score", currentScore);
+        score += 1;
     }
 
     public void Currency()

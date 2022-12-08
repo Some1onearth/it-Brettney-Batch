@@ -415,6 +415,7 @@ GameObject:
   - component: {fileID: 2664987052517972418}
   - component: {fileID: 1973707392846316128}
   - component: {fileID: 1886855971558116417}
+  - component: {fileID: -5670004874604616094}
   m_Layer: 0
   m_Name: LocalPlayer
   m_TagString: Player
@@ -497,3 +498,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 3631547159506908985}
   playerMoveSpeed: 5
+--- !u!136 &-5670004874604616094
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5976996778502043199}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
