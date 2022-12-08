@@ -13,7 +13,9 @@ public class EnemyMovement : MonoBehaviour
     public AIStates state;
     public Transform target;
     public Transform player;
+    public GameObject wayPointPrefab;
     public Transform WayPointParent;
+    public Transform wayPointSpawnParent;
     protected Transform[] wayPoints;
     public int nextPoint, difficulty;
     public NavMeshAgent agent;
@@ -23,8 +25,11 @@ public class EnemyMovement : MonoBehaviour
     public void Start()
     {
 
+        wayPointSpawnParent = GameObject.Find("EnemyWaypoints").transform;
+        //Instantiate waypoints for the enemy on start
+        GameObject spawnedWaypoints = Instantiate(wayPointPrefab, transform.position, Quaternion.identity, wayPointSpawnParent);
         //get waypoints array from waypoint parent
-        wayPoints = WayPointParent.GetComponentsInChildren<Transform>();
+        wayPoints = spawnedWaypoints.GetComponentsInChildren<Transform>();//WayPointParent.GetComponentsInChildren<Transform>();
         //get navMeshAgent from self
         agent = GetComponent<NavMeshAgent>();
         //Set speed of agent
@@ -37,15 +42,15 @@ public class EnemyMovement : MonoBehaviour
     public void Update()
     {
         Patrol();
-        Seek();
+        //Seek();
     }
     void Patrol()
     {
         //DO NOT CONTINUE IF NO WAYPOINTS, dead, player in range
-        if (wayPoints.Length <= 0 || Vector3.Distance(player.position, transform.position) <= sightRange)
-        {
-            return;
-        }
+        //if (wayPoints.Length <= 0 || Vector3.Distance(player.position, transform.position) <= sightRange)
+        //{
+        //    return;
+        //}
         state = AIStates.Patrol;
         //Set agent to target
         agent.destination = wayPoints[nextPoint].position;

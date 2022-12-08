@@ -129,7 +129,9 @@ MonoBehaviour:
   state: 0
   target: {fileID: 0}
   player: {fileID: 0}
+  wayPointPrefab: {fileID: 7707853181165948495, guid: 56cb687ffff03644396edde8bcb2a08d, type: 3}
   WayPointParent: {fileID: 0}
+  wayPointSpawnParent: {fileID: 0}
   nextPoint: 0
   difficulty: 0
   agent: {fileID: 0}
