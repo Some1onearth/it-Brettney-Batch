@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject enemyMob;
     public int currentScore;
-    public int addScore = 5;
+    public int addScore = 1;
     public int currentCurrency;
     private int _maxMobCount = 0;
     private int _curMobCount = 0;
@@ -101,9 +101,9 @@ public class GameManager : MonoBehaviour
 
     public void Currency()
     {
-        //currentCurrency = currentScore / 10;
-        //currencyText.text = "" + currentCurrency;
-        //PlayerPrefs.SetInt("Currency", currentCurrency);
+        currentCurrency = currentScore * 10;
+        currencyText.text = "" + currentCurrency;
+        PlayerPrefs.SetInt("Currency", currentCurrency);
     }
 
     public void Spend(int price)
