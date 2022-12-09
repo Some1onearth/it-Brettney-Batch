@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Map
   - Enemy
+  - UpButton
+  - DownButton
+  - LeftButton
+  - RightButton
+  - AttackButton
   layers:
   - Default
   - TransparentFX
