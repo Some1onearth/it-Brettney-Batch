@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     #region Variables
     public static Dictionary<ushort, Player> list = new Dictionary<ushort, Player>();
     [SerializeField] private GameObject model;
+    [SerializeField] private GameObject selectedSkin0, selectedSkin1, defaultSkin;
     #endregion
 
     public ushort Id { get; private set; }
@@ -19,6 +20,25 @@ public class Player : MonoBehaviour
 
     private string username;
 
+    private void Start()
+    {
+        switch (SkinSelection.skinIndex) //checks skinIndex from SkinSelection class
+        {
+            case 0: //case 0
+                //sets Skin0 active and other skins disabled
+                selectedSkin0.SetActive(true);
+                selectedSkin1.SetActive(false);
+                defaultSkin.SetActive(false);
+                break;
+            case 1: //case 1
+                //sets Skin1 active and other skins disabled
+                selectedSkin0.SetActive(false);
+                selectedSkin1.SetActive(true);
+                defaultSkin.SetActive(false);
+                break;
+        }
+
+    }
 
     private void OnDestroy()
     {
