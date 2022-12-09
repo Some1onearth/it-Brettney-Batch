@@ -13,6 +13,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private List<MobileButton> _mobileButtons;
     [SerializeField] private MobileButton _upButton, _downButton, _leftButton, _rightButton, _attackButton;
 
+    [SerializeField] private GameObject selectedSkin0, selectedSkin1, defaultSkin;
+    [SerializeField] private SkinSelection _skinSelection;
+
     public bool upButton, downButton, leftButton, rightButton, attackButton;
 
     private bool[] inputs;
@@ -30,6 +33,8 @@ public class PlayerController : MonoBehaviour
         _mobileButtons.Add(_rightButton);
         _attackButton = GameObject.FindWithTag("AttackButton").GetComponent<MobileButton>();
         _mobileButtons.Add(_attackButton);
+
+        _skinSelection = GameObject.FindWithTag("SkinPanel").GetComponent<SkinSelection>();
     }
 
     private void Start()
@@ -40,6 +45,22 @@ public class PlayerController : MonoBehaviour
         }
         //creates inputs array with a length of 7 
         inputs = new bool[7];
+
+        switch (_skinSelection.skinIndex) //checks skinIndex from SkinSelection class
+        {
+            case 0: //case 0
+                //sets Skin0 active and other skins disabled
+                selectedSkin0.SetActive(true);
+                selectedSkin1.SetActive(false);
+                defaultSkin.SetActive(false);
+                break;
+            case 1: //case 1
+                //sets Skin1 active and other skins disabled
+                selectedSkin0.SetActive(false);
+                selectedSkin1.SetActive(true);
+                defaultSkin.SetActive(false);
+                break;
+        }
     }
 
     public void ShootBullet()

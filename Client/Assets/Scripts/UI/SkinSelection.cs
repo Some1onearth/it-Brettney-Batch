@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SkinSelection : MonoBehaviour
 {
-    public static int skinIndex = 0;
+    public int skinIndex = 0;
 
     [SerializeField] private GameObject skin0, skin1;
     [SerializeField] private GameObject _playerPreview;

@@ -488,9 +488,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 4276383331403744923}
-  selectedSkin0: {fileID: 7114718006778886645}
-  selectedSkin1: {fileID: 5098771024376258254}
-  defaultSkin: {fileID: 5383541585749455836}
   animationManager: {fileID: 1886855971558116417}
   camTransform: {fileID: 4782615100965492034}
 --- !u!114 &2664987052517972418
@@ -516,6 +513,10 @@ MonoBehaviour:
   _leftButton: {fileID: 0}
   _rightButton: {fileID: 0}
   _attackButton: {fileID: 0}
+  selectedSkin0: {fileID: 7114718006778886645}
+  selectedSkin1: {fileID: 5098771024376258254}
+  defaultSkin: {fileID: 5383541585749455836}
+  _skinSelection: {fileID: 0}
   upButton: 0
   downButton: 0
   leftButton: 0

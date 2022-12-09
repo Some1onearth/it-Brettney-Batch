@@ -18,46 +18,49 @@ public class MobileButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     {
         Debug.Log(_isPressed);
 
-        if (_isPressed)
+        if(_pc != null)
         {
-            switch (button)
+            if (_isPressed)
             {
-                case ButtonType.Up:
-                    _pc.upButton = true;
-                    break;
-                case ButtonType.Down:
-                    _pc.downButton = true;
-                    break;
-                case ButtonType.Left:
-                    _pc.leftButton = true;
-                    break;
-                case ButtonType.Right:
-                    _pc.rightButton = true;
-                    break;
-                case ButtonType.Attack:
-                    _pc.attackButton = true;
-                    break;
+                switch (button)
+                {
+                    case ButtonType.Up:
+                        _pc.upButton = true;
+                        break;
+                    case ButtonType.Down:
+                        _pc.downButton = true;
+                        break;
+                    case ButtonType.Left:
+                        _pc.leftButton = true;
+                        break;
+                    case ButtonType.Right:
+                        _pc.rightButton = true;
+                        break;
+                    case ButtonType.Attack:
+                        _pc.attackButton = true;
+                        break;
+                }
             }
-        }
-        else
-        {
-            switch (button)
+            else
             {
-                case ButtonType.Up:
-                    _pc.upButton = false;
-                    break;
-                case ButtonType.Down:
-                    _pc.downButton = false;
-                    break;
-                case ButtonType.Left:
-                    _pc.leftButton = false;
-                    break;
-                case ButtonType.Right:
-                    _pc.rightButton = false;
-                    break;
-                case ButtonType.Attack:
-                    _pc.attackButton = false;
-                    break;
+                switch (button)
+                {
+                    case ButtonType.Up:
+                        _pc.upButton = false;
+                        break;
+                    case ButtonType.Down:
+                        _pc.downButton = false;
+                        break;
+                    case ButtonType.Left:
+                        _pc.leftButton = false;
+                        break;
+                    case ButtonType.Right:
+                        _pc.rightButton = false;
+                        break;
+                    case ButtonType.Attack:
+                        _pc.attackButton = false;
+                        break;
+                }
             }
         }
     }
