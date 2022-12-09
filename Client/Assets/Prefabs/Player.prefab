@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 6650242576998584257}
   - component: {fileID: 7957554418938830633}
   - component: {fileID: 2420741811269945994}
-  - component: {fileID: 57866911272311562}
+  - component: {fileID: -7278535807899589526}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -218,7 +218,6 @@ MonoBehaviour:
   model: {fileID: 0}
   animationManager: {fileID: 2420741811269945994}
   camTransform: {fileID: 3727455330639224411}
-  interpolator: {fileID: 57866911272311562}
 --- !u!114 &2420741811269945994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,18 +232,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 5227326206111516794}
   playerMoveSpeed: 5
---- !u!114 &57866911272311562
-MonoBehaviour:
+--- !u!136 &-7278535807899589526
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5976996778502043199}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: feab43a670893dc4586f3885ff7596ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeElapsed: 0
-  timeToReachTarget: 0.05
-  movementThreshhold: 0.05
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}

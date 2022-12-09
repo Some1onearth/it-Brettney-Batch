@@ -26,10 +26,10 @@ public class Player : MonoBehaviour
     }
 
 
-    public static void Spawn(ushort id, string username)
+    public static void Spawn(ushort id, string username) 
     {
         foreach (Player otherPlayer in list.Values)
-            otherPlayer.SendSpawned(id);
+            otherPlayer.SendSpawned(id); //Ensures all other clients are spawned into the game correctly.
 
 
 
@@ -44,9 +44,10 @@ public class Player : MonoBehaviour
         player.Username = string.IsNullOrEmpty(username) ? "Guest" : username;
         player.SendSpawned();
         list.Add(id, player);
+        
     }
 
-    private void SendSpawned()
+    private void SendSpawned()//Sends the message through
     {
         // Message message = Message.Create(MessageSendMode.reliable, (ushort)ServerToClientID.playerSpawned);
 
@@ -54,32 +55,29 @@ public class Player : MonoBehaviour
     }
 
 
-    private void SendSpawned(ushort toClientId)
+    private void SendSpawned(ushort toClientId)//SendSpawned Overlaod Function
     {
+
         NetworkManager.NetworkManagerInstance.GameServer.Send(AddSpawnData(Message.Create(MessageSendMode.reliable, ServerToClientId.playerSpawned)), toClientId);
     }
 
-    private Message AddSpawnData(Message message)
+    private Message AddSpawnData(Message message)//Adds additional Spawn Data before sending back to SendSpawnedMethod.
     {
-        message.AddUShort(Id);
+        message.AddUShort(Id);//Adds the spawn data in for sending messages purposes.
         message.AddString(Username);
         message.AddVector3(transform.position);
         return message;
     }
 
 
-    [MessageHandler((ushort)ClientToServerId.name)]
-
-
-
-    //  [MessageHandler((ushort)ClientToServerId.name)]
+    [MessageHandler((ushort)ClientToServerId.name)]//REcieves the players Name from the client
     private static void Name(ushort fromClientId, Message message)
     {
         Spawn(fromClientId, message.GetString()); 
     }
 
 
-    [MessageHandler((ushort)ClientToServerId.input)]
+    [MessageHandler((ushort)ClientToServerId.input)]//Used to recieve the input of the client that can be used to control the player.
     private static void Input(ushort fromClientId, Message message)
     {
         if (list.TryGetValue(fromClientId, out Player player))

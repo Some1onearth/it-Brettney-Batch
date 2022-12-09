@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 192322047363451207}
   - component: {fileID: 4703028490180230644}
   - component: {fileID: 116236006044841925}
-  - component: {fileID: -1511233399508047651}
+  - component: {fileID: -4919157621493182719}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -134,12 +134,12 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-1511233399508047651
+--- !u!114 &-4919157621493182719
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -148,15 +148,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1988563410076853048}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13445774049468f44a469f2b4a2c34a1, type: 3}
+  m_Script: {fileID: 11500000, guid: 80d56750be774d6468f937ee9f857bcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
-  _currentWave: 0
-  _maxWave: 3
-  _shouldSpawn: 0
-  _enemiesToSpawn: 0
-  _enemyPrefab: {fileID: 1988563410076853048, guid: f5e2d2805028082449a8d5b7063a5bf4, type: 3}
-  _timer: 0
-  _spawnDelay: 2
-  enemyReferenceID: 0
+  state: 0
+  target: {fileID: 0}
+  wayPointPrefab: {fileID: 7707853181165948495, guid: 56cb687ffff03644396edde8bcb2a08d, type: 3}
+  WayPointParent: {fileID: 0}
+  wayPointSpawnParent: {fileID: 0}
+  nextPoint: 0
+  difficulty: 0
+  agent: {fileID: 4703028490180230644}
+  walkSpeed: 5
+  runSpeed: 10
+  attackRange: 0
+  sightRange: 0
+  distanceToPoint: 0
+  changePoint: 1

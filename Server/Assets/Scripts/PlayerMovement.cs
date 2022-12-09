@@ -8,7 +8,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
+    public static Room room;
+    public static EnemyMovement enemymovement;
     [SerializeField] private Player player;
     [SerializeField] private CharacterController controller;
     [SerializeField] private Transform camProxy;
@@ -23,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
     private bool[] inputs;
     private float yVelocity;
 
-    
+
 
 
 
@@ -39,6 +40,10 @@ public class PlayerMovement : MonoBehaviour
         {
             player = GetComponent<Player>();
         }
+
+
+       
+
 
 
 
@@ -78,9 +83,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
         Move(inputDirection, inputs[4], inputs[5]);
-
-       
-
     }
 
     private void Initialize()
@@ -94,11 +96,9 @@ public class PlayerMovement : MonoBehaviour
     private void Move(Vector2 inputDirection, bool jump, bool sprint)
     {
 
-//       Set the player's forward rotation to the inputDirection (what way the character is facing)
-//       Make the player Move forward regardless while input is being used.
-//       
-      
-if (inputDirection.magnitude>0)
+        //       Set the player's forward rotation to the inputDirection (what way the character is facing)
+        //       Make the player Move forward regardless while input is being used.
+        if (inputDirection.magnitude > 0)
         {
             Vector3 lookDirection = new Vector3(inputDirection.x, 0, inputDirection.y);
             transform.forward = lookDirection;
@@ -147,7 +147,7 @@ if (inputDirection.magnitude>0)
 
 
 
-    private void SendMovement()
+    private void SendMovement()//Sends the movement through playermovement to ALL clients with the player's ID so it knows which player is moving.
     {
         if (NetworkManager.NetworkManagerInstance.CurrentTick % 2 != 0)
         {
@@ -159,33 +159,10 @@ if (inputDirection.magnitude>0)
 
         message.AddVector3(transform.position);
         message.AddVector3(transform.forward);
-      
+
         NetworkManager.NetworkManagerInstance.GameServer.SendToAll(message);
 
 
     }
-    private void OnControllerColliderHit(ControllerColliderHit hit)
-    {
-        Rigidbody rigidbody = hit.collider.attachedRigidbody;
-
-        if (rigidbody != null)
-        {
-            Debug.Log("Collission with something>");
-            if (hit.gameObject.CompareTag("Enemy"))//We will send a message to the client containing what enemy was hit, and the new player Score.
-            {
-                Debug.Log("Collission with Enemy");
-                //When we want to send a message, we need to create the message using the sendmond and also what is the message Type(In this case collision)
-                //Then we need to add all the values that we are passing through, for this we are passing through the score that the player will get
-                //Message message = Message.Create(MessageSendMode.reliable, (ushort)ServerToClientId.collision); //Creates the message
-                //message.AddInt(score);//Sends this value of how much score the player gets.
-                //message.AddInt(enemyId); //Sends the ID of the enemy.
-
-                //NetworkManager.NetworkManagerInstance.GameServer.SendToAll(message);//Sends this message to all clients
-
-                Destroy(hit.gameObject); //destroys this object
-
-            }
-        }
-    }
-
+  
 }

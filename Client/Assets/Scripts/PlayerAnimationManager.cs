@@ -24,7 +24,7 @@ public class PlayerAnimationManager : MonoBehaviour
         float distanceMoved = Vector3.Distance(transform.position, lastPosition);
         animator.SetBool("IsMoving", distanceMoved > 0.01f);
         animator.SetBool("IsSprinting", distanceMoved > sprintThreshold);
-        Debug.Log(distanceMoved);
+      //  Debug.Log(distanceMoved);
         
         lastPosition = transform.position;
     }

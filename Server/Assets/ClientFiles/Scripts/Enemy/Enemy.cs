@@ -59,21 +59,21 @@ public class Enemy : MonoBehaviour
     }
 
 
-    private void SendMovement()
-    {
-        if (NetworkManager.NetworkManagerInstance.CurrentTick % 2 != 0)
-        {
-            return;
-        }
-        Message message = Message.Create(MessageSendMode.unreliable, ServerToClientId.enemyMovement);
-        message.AddUShort(room.EnemyId);
-        message.AddUShort(NetworkManager.NetworkManagerInstance.CurrentTick);
+    //private void SendMovement()
+    //{
+    //    if (NetworkManager.NetworkManagerInstance.CurrentTick % 2 != 0)
+    //    {
+    //        return;
+    //    }
+    //    Message message = Message.Create(MessageSendMode.unreliable, ServerToClientId.enemyMovement);
+    //    message.AddUShort(room.EnemyId);
+    //    message.AddUShort(NetworkManager.NetworkManagerInstance.CurrentTick);
 
-        message.AddVector3(transform.position);
-        message.AddVector3(transform.forward);
+    //    message.AddVector3(transform.position);
+    //    message.AddVector3(transform.forward);
 
-        NetworkManager.NetworkManagerInstance.GameServer.SendToAll(message);
+    //    NetworkManager.NetworkManagerInstance.GameServer.SendToAll(message);
 
 
-    }
+    //}
 }
