@@ -56,7 +56,7 @@ public class Room : MonoBehaviour
     {
         Debug.Log("Attempting to destroy Enemy");
         Destroy(gameObject);
-        GameManager.AddScore();//THIS IS THE SCORE (CLIENT SIDED)
+        GameManager.gameManager.AddScore();//THIS IS THE SCORE (CLIENT SIDED)
     }
 
 

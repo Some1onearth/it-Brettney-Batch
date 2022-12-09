@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
 
 
      */
-    public static int score;
+    public static GameManager gameManager;
     [SerializeField] private GameObject[] roomDoor;
     [SerializeField] private Button readyButton;
     [SerializeField] private Text curMobText;
@@ -40,12 +40,22 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+
         endGameScreen.SetActive(false);
         gameHud.SetActive(true);
        // _curLevel = 1;
         _maxMobCount = 4;
         _curMobCount = 0;
         gameStart = false;
+        if (gameManager == null)
+        {
+            gameManager = this;
+        }
+        else
+        {
+            Destroy(this);
+            Debug.LogWarning("Second GameManager");
+        }
     }
 
     public void Update()
@@ -57,7 +67,6 @@ public class GameManager : MonoBehaviour
        
 
         curLevelText.text = "Stage: " + _curLevel;
-        Currency(); // updates currency constantly.
     }
 
 
@@ -92,9 +101,12 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public static void AddScore() // reference this within hitcollision code when adding score
+    public void AddScore() // reference this within hitcollision code when adding score
     {
-        score += 1;
+        currentScore += 1;
+        scoreText.text = "" + currentScore;
+        PlayerPrefs.SetInt("Score", currentScore);
+        Currency();
     }
 
     public void Currency()
