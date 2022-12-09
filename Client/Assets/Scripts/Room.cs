@@ -7,10 +7,9 @@ using System;
 public class Room : MonoBehaviour
 {
     #region NetworkVariables
-    public static Dictionary<ushort, Room> list = new Dictionary<ushort, Room>();
-    public static Dictionary<ushort, Transform> enemylist = new Dictionary<ushort, Transform>();
-    public ushort EnemyId { get; private set; }
-    public Vector3 EnemyPosition { get; private set; }
+    public static Dictionary<ushort, Transform> enemylist = new Dictionary<ushort, Transform>(); //Dictionary List of the Spawned Enemies
+    public static Dictionary<ushort, EnemyHandler> movementlist = new Dictionary<ushort, EnemyHandler>();//Dictioanry List of the Movement ID
+    public ushort EnemyId { get; private set; } //Public get but a private set(Only this script sets the enemyID but other scripts and get the data
 
     #endregion
     [SerializeField] private static GameObject _enemyPrefab;
@@ -22,55 +21,35 @@ public class Room : MonoBehaviour
     #region Network Methods
     private void OnDestroy()
     {
-        list.Remove(EnemyId);
+        enemylist.Remove(EnemyId);
+        movementlist.Remove(EnemyId);
     }
- 
+
     public static void Spawn(string message)
     {
-        //Our ID is not incrementing correctly.
-        Debug.Log(message);
+        //Splits the recieved message into tangible data, Ushort ID &  Vector3 Transform
         string[] messageSplit = message.Split("|");
-        Debug.Log(messageSplit[0]+messageSplit[1]);
         ushort tempid = Convert.ToUInt16(messageSplit[0]);
-        Debug.Log(tempid);
         messageSplit[1] = messageSplit[1].Trim('(',')');
         string[] temppos = messageSplit[1].Split(",");
-        Debug.Log(temppos[0] + temppos[1] + temppos[2]);
         Vector3 position = new Vector3(float.Parse(temppos[0]), float.Parse(temppos[1]), float.Parse(temppos[2]));
-        Debug.Log(position);
-        // var arr = message.Split(["|"], StringSplitOptions.None);
-        EnemyHandler enemy = Instantiate (GameLogic.GameLogicInstance.EnemyPrefab, position, Quaternion.identity).GetComponent<EnemyHandler>();
-        enemy.EnemyId = tempid;
+        
+        
+        EnemyHandler enemy = Instantiate (GameLogic.GameLogicInstance.EnemyPrefab, position, Quaternion.identity).GetComponent<EnemyHandler>();//Instantaites the prefab and gets the specifc enemyhandler on the spawned object
+        enemy.EnemyId = tempid;//Assigned the ID of the enemy
         Debug.Log("room.EnemyId"+enemy.EnemyId);
-       // enemy.EnemyPosition = position;
-        enemylist.Add(tempid, enemy.transform);
+        enemylist.Add(tempid, enemy.transform);//Adds to the list
+        movementlist.Add(tempid, enemy);//adds to the list
+
     }
-   
+
     [MessageHandler((ushort)ServerToClientId.enemySpawned)]
-    private static void SpawnEnemy(Message message)
+    private static void SpawnEnemy(Message message)//Recieves a message from server (enemySpawned message) as a string
     {
         Spawn(message.GetString());
     }
 
-    public void EnemyDied(ushort enemyID)
-    {
-        Debug.Log("Attempting to destroy Enemy");
-        Destroy(gameObject);
-        GameManager.gameManager.AddScore();//THIS IS THE SCORE (CLIENT SIDED)
-    }
-
-
-    [MessageHandler((ushort)ServerToClientId.enemyDeath)]
-    private static void EnemyDead(Message message)
-    {
-        if (list.TryGetValue(message.GetUShort(), out Room room))
-        {
-            room.EnemyDied(message.GetUShort());
-            // Debug.Log("Recieved enemymovement");
-
-        }
-    }
-
+   
 
 
     #endregion

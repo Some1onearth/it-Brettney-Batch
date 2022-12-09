@@ -6,7 +6,8 @@ using UnityEngine.AI;
 
 public class EnemyMovement : MonoBehaviour
 {
-    public ushort EnemyId { get;  set; }
+    //This script Handles ONLY enemyMovement and Death
+    public ushort EnemyId { get; set; } //Used to get and set the EnemyId in room.list
     public static Room room;
     public enum AIStates
     {
@@ -35,7 +36,7 @@ public class EnemyMovement : MonoBehaviour
     }
     public void Start()
     {
-        internalID = EnemyId;
+        internalID = EnemyId; //Sets the internal ID to the unique enemy.
         wayPointSpawnParent = GameObject.Find("EnemyWaypoints").transform;
         //Instantiate waypoints for the enemy on start
         GameObject spawnedWaypoints = Instantiate(wayPointPrefab, transform.position, Quaternion.identity, wayPointSpawnParent);
@@ -53,7 +54,7 @@ public class EnemyMovement : MonoBehaviour
     public void Update()
     {
         // SendMovement();
-        Debug.Log("Patrol");
+        //  Debug.Log("Patrol");
         Patrol();
     }
     void Patrol()
@@ -82,7 +83,7 @@ public class EnemyMovement : MonoBehaviour
                 nextPoint = 1;
             }
         }
-       // Debug.Log("Sending Movement");
+        // Debug.Log("Sending Movement");
         SendMovement();
     }
 
@@ -91,14 +92,38 @@ public class EnemyMovement : MonoBehaviour
 
     private void SendMovement()
     {
-        //if (NetworkManager.NetworkManagerInstance.CurrentTick % 2 != 0)
-        //{
-        //    return;
-        //}
+        //SENDS THE MESSAGE CONVERTING internalID, transform.position & transform.forward to a string
         Message message = Message.Create(MessageSendMode.unreliable, ServerToClientId.enemyMovement);
-        message.AddString(internalID+"|"+transform.position+"|"+transform.forward);
+        message.AddString(internalID + "|" + transform.position + "|" + transform.forward);
         message.AddUShort(NetworkManager.NetworkManagerInstance.CurrentTick);
         NetworkManager.NetworkManagerInstance.GameServer.SendToAll(message);
-        Debug.Log(internalID + "|" + transform.position + "|" + transform.forward);
+        //  Debug.Log(internalID + "|" + transform.position + "|" + transform.forward);
     }
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))//We will send a message to the client containing what enemy was hit, and the new player Score.
+        {
+            Debug.Log("Collission with Player");
+            EnemyDead();
+           Destroy(this.gameObject);
+
+        }
+    }
+
+
+    private void EnemyDead()
+    {
+//Sends a Message through enemyDeath with the internalID of the enemy that is being killed, Sent reliable to ensure message goes through.
+        Message message = Message.Create(MessageSendMode.reliable, ServerToClientId.enemyDeath);
+        message.AddUShort(internalID);
+        message.AddUShort(NetworkManager.NetworkManagerInstance.CurrentTick);
+
+        NetworkManager.NetworkManagerInstance.GameServer.SendToAll(message);//Sends it to all clients
+        Debug.Log("EnemyDead message sent");
+
+    }
+
+
 }

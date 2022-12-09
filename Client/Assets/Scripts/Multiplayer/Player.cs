@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] private PlayerAnimationManager animationManager;
     [SerializeField] private Transform camTransform;
-  //  [SerializeField] private Interpolator interpolator;
+    //  [SerializeField] private Interpolator interpolator;
 
     private string username;
 
@@ -46,9 +46,8 @@ public class Player : MonoBehaviour
     }
 
 
-    private void Move(ushort tick, Vector3 newPosition, Vector3 forward)
+    private void Move(ushort tick, Vector3 newPosition, Vector3 forward)//runs function after receiving message from server and places the position.
     {
-       // interpolator.NewUpdate(tick, newPosition);
         transform.position = newPosition;
 
 
@@ -58,10 +57,10 @@ public class Player : MonoBehaviour
 
     }
 
-        public static void Spawn(ushort id, string username, Vector3 position)
+    public static void Spawn(ushort id, string username, Vector3 position)
     {
         Player player;
-        if (id == NetworkManager.NetworkManagerInstance.GameClient.Id)
+        if (id == NetworkManager.NetworkManagerInstance.GameClient.Id)//Used to determine if the player is Local or not local(Can the client control this player by adding inputs)
         {
 
             player = Instantiate(GameLogic.GameLogicInstance.LocalPlayerPrefab, position, Quaternion.identity).GetComponent<Player>();
@@ -84,37 +83,36 @@ public class Player : MonoBehaviour
     }
 
     [MessageHandler((ushort)ServerToClientId.playerSpawned)]
-    private static void SpawnPlayer(Message message)
+    private static void SpawnPlayer(Message message)//recieves playerspawned message from server
     {
         Spawn(message.GetUShort(), message.GetString(), message.GetVector3());
     }
 
     [MessageHandler((ushort)ServerToClientId.playerMovement)]
-    private static void PlayerMovement(Message message)
+    private static void PlayerMovement(Message message)//Recieves message from server from playerMovement Message.
     {
         if (list.TryGetValue(message.GetUShort(), out Player player))
         {
-            player.Move(message.GetUShort(), message.GetVector3(), message.GetVector3());
+            player.Move(message.GetUShort(), message.GetVector3(), message.GetVector3());//Runs move function on the player with correct ushort
         }
     }
 
-    
 
-    //private void OnCollisionEnter(Collision collider)
+
+
+
+    #region PlayerControllerComments
+
+
+    //This section is added as if added to player controller now it will cause conflict issues as other changes were made but have not been pulled
+    //private void SendInput()//Sends the message to client with the array of bools values and the camera's forward vector to the server 
     //{
-        
-
-    //        Debug.Log("Collission with something>");
-    //        if (collider.collider.CompareTag("Enemy"))//We will send a message to the client containing what enemy was hit, and the new player Score.
-    //        {
-    //            Debug.Log("Collission with Enemy");
-
-
-    //            Destroy(collider.gameObject);
-
-    //        }
-       
+    //    Message message = Message.Create(MessageSendMode.unreliable, ClientToServerId.input);
+    //    message.AddBools(inputs, false);
+    //    message.AddVector3(camTransform.forward);
+    //    NetworkManager.NetworkManagerInstance.GameClient.Send(message); //Sends the message to the server with the message.
     //}
 
+    #endregion
 
 }
