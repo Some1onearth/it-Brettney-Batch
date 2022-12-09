@@ -35,7 +35,7 @@ public class SkinSelection : MonoBehaviour
                     Destroy(t.gameObject);
                 }
                 //Instantiates skin 0 at the set position + rotation and places it under playerPreview as the parent
-                GameObject newModel = Instantiate(skin0, _playerPreview.transform.position, Quaternion.identity, _playerPreview.GetComponentInParent<Transform>());
+                GameObject newModel = Instantiate(skin0, _playerPreview.transform.position, Quaternion.Euler(new Vector3(0, 180, 0)), _playerPreview.GetComponentInParent<Transform>());
                 break;
             case 1: //case 1
                 //Destroys all gameObjects under the playerPreview gameObject. Making way for the replacement skin
@@ -44,7 +44,7 @@ public class SkinSelection : MonoBehaviour
                     Destroy(t.gameObject);
                 }
                 //Instantiates skin 1 at the set position + rotation and places it under playerPreview as the parent
-                GameObject newModel1 = Instantiate(skin1, _playerPreview.transform.position, Quaternion.identity, _playerPreview.GetComponentInParent<Transform>());
+                GameObject newModel1 = Instantiate(skin1, _playerPreview.transform.position, Quaternion.Euler(new Vector3(0, 180, 0)), _playerPreview.GetComponentInParent<Transform>());
                 break;
         }
     }
