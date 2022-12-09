@@ -32,11 +32,13 @@ public class CameraController : MonoBehaviour
 
     private void Update()
     {
+        //if esc is pressed this code will operate
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             ToggleCursorMode();
         }
 
+       //if the cursor is not moving and is in a "lockstate" the Look code will operate
         if (Cursor.lockState == CursorLockMode.Locked)
         {
             Look();
@@ -48,10 +50,12 @@ public class CameraController : MonoBehaviour
 
     }
 
+    
     private void Look()
     {
+        //The in-game camera will follow the player's mouse movement, allows the player to look around
 
-        float mouseVertical = -Input.GetAxis("Mouse Y");
+        float mouseVertical = -Input.GetAxis("Mouse Y"); 
         float mouseHorizontal = Input.GetAxis("Mouse X");
 
         verticalRotation += mouseVertical * sensitivity * Time.deltaTime;
@@ -66,8 +70,12 @@ public class CameraController : MonoBehaviour
 
     private void ToggleCursorMode()
     {
+        //The camera will no longer register to the player's mouse movement
+        //and instead appear a cursor 
         Cursor.visible = !Cursor.visible;
 
+
+        //checks if the mouse is locked at the center of the screen
         if (Cursor.lockState == CursorLockMode.None)
         {
             Cursor.lockState = CursorLockMode.Locked;

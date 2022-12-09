@@ -16,7 +16,9 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-
+        // WASD are the movement controls
+        // LeftShift is sprint
+        
         if (Input.GetKey(KeyCode.W))
         {
             inputs[0] = true;
@@ -51,7 +53,7 @@ public class PlayerController : MonoBehaviour
     {
         SendInput();
 
-
+        //checks for inputs and how long it is being pressed
         for (int i = 0; i < inputs.Length; i++)
         {
             inputs[i] = false;
