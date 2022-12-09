@@ -17,7 +17,7 @@ public class ShootProjectile : MonoBehaviour
     }
     public void ShootBullet()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(1))
         {
             Instantiate(projectilePrefab, transform.position, Quaternion.identity);
         }
