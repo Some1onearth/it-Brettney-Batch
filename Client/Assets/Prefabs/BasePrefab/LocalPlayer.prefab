@@ -447,7 +447,6 @@ GameObject:
   - component: {fileID: 7957554418938830633}
   - component: {fileID: 2664987052517972418}
   - component: {fileID: 1973707392846316128}
-  - component: {fileID: 1886855971558116417}
   - component: {fileID: -5670004874604616094}
   m_Layer: 0
   m_Name: LocalPlayer
@@ -488,7 +487,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 4276383331403744923}
-  animationManager: {fileID: 1886855971558116417}
+  playerController: {fileID: 2664987052517972418}
   camTransform: {fileID: 4782615100965492034}
 --- !u!114 &2664987052517972418
 MonoBehaviour:
@@ -503,6 +502,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 7124918281213671823, guid: a45603b1bf937524cbec03e9d166538c, type: 3}
+  animator: {fileID: 0}
+  playerMoveSpeed: 0
   _projectileSpawner: {fileID: 4013167347353927079}
   timer: 0
   shootTimer: 1
@@ -537,20 +538,6 @@ MonoBehaviour:
   player: {fileID: 7957554418938830633}
   sensitivity: 300
   clampAngle: 85
---- !u!114 &1886855971558116417
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5976996778502043199}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 264df8d29a838b047bff1f10e503d151, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 3631547159506908985}
-  playerMoveSpeed: 5
 --- !u!136 &-5670004874604616094
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -6,6 +6,12 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public GameObject projectilePrefab;
+
+    [SerializeField] private Animator animator;
+    [SerializeField] private float playerMoveSpeed;
+    private float sprintThreshold;
+    private Vector3 lastPosition;
+
     [SerializeField] private GameObject _projectileSpawner;
     [SerializeField] private float timer = 0, shootTimer;
 
@@ -23,6 +29,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
+        //attaches on screen buttons to controls set up
         _upButton = GameObject.FindWithTag("UpButton").GetComponent<MobileButton>();
         _mobileButtons.Add(_upButton);
         _downButton = GameObject.FindWithTag("DownButton").GetComponent<MobileButton>();
@@ -39,6 +46,9 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        lastPosition = transform.position;
+        sprintThreshold = playerMoveSpeed * 1.5f * Time.fixedDeltaTime;
+
         foreach (var button in _mobileButtons)
         {
             button._pc = this;
@@ -51,16 +61,30 @@ public class PlayerController : MonoBehaviour
             case 0: //case 0
                 //sets Skin0 active and other skins disabled
                 selectedSkin0.SetActive(true);
+                animator = selectedSkin0.GetComponent<Animator>();
                 selectedSkin1.SetActive(false);
                 defaultSkin.SetActive(false);
+                
                 break;
             case 1: //case 1
                 //sets Skin1 active and other skins disabled
                 selectedSkin0.SetActive(false);
                 selectedSkin1.SetActive(true);
+                animator = selectedSkin1.GetComponent<Animator>();
                 defaultSkin.SetActive(false);
                 break;
         }
+    }
+
+    public void AnimatedBasedOnSpeed()
+    {
+        lastPosition.y = transform.position.y;
+        float distanceMoved = Vector3.Distance(transform.position, lastPosition);
+        animator.SetBool("IsMoving", distanceMoved > 0.01f);
+        animator.SetBool("IsSprinting", distanceMoved > sprintThreshold);
+        //  Debug.Log(distanceMoved);
+
+        lastPosition = transform.position;
     }
 
     public void ShootBullet()
@@ -84,6 +108,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.W) || upButton)
         {
             inputs[0] = true;
+
         }
         //if user inputs S key
         if (Input.GetKey(KeyCode.S) || downButton)

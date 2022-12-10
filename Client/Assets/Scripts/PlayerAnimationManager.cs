@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerAnimationManager : MonoBehaviour
 {
+    /*
     [SerializeField] private Animator animator;
     [SerializeField] private float playerMoveSpeed;
 
@@ -28,14 +29,5 @@ public class PlayerAnimationManager : MonoBehaviour
         
         lastPosition = transform.position;
     }
-
-
-
-
-
-
-
-
-
-
+    */
 }

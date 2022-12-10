@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
 
     public bool IsLocal { get; private set; }
 
-    [SerializeField] private PlayerAnimationManager animationManager;
+    [SerializeField] private PlayerController playerController;
     [SerializeField] private Transform camTransform;
     //  [SerializeField] private Interpolator interpolator;
 
@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
 
     private void OnDestroy()
     {
-        list.Remove(Id);
+        list.Remove(Id); //removes id after player is destroyed in scene.
     }
 
 
@@ -31,9 +31,9 @@ public class Player : MonoBehaviour
         transform.position = newPosition;
 
 
-        model.transform.forward = forward;
+        //model.transform.forward = forward;
 
-        animationManager.AnimatedBasedOnSpeed();
+        playerController.AnimatedBasedOnSpeed();
 
     }
 
