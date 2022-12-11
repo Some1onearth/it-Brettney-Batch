@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] private PlayerController playerController;
     [SerializeField] private Transform camTransform;
-    //  [SerializeField] private Interpolator interpolator;
+      [SerializeField] private Interpolator interpolator;
 
     private string username;
 
@@ -28,9 +28,17 @@ public class Player : MonoBehaviour
 
     private void Move(ushort tick, Vector3 newPosition, Vector3 forward)//runs function after receiving message from server and places the position.
     {
-        transform.position = newPosition;
+        interpolator.NewUpdate(tick, newPosition);
+        //transform.position = newPosition;
 
 
+        if (!IsLocal)
+            camTransform.forward = forward;
+        //Debug.Log("Move Method" + forward);
+        //if (!IsLocal)
+        //{
+        //    camTransform.forward = forward;
+        //}
         //model.transform.forward = forward;
 
         playerController.AnimatedBasedOnSpeed();
@@ -42,13 +50,14 @@ public class Player : MonoBehaviour
         Player player;
         if (id == NetworkManager.NetworkManagerInstance.GameClient.Id)//Used to determine if the player is Local or not local(Can the client control this player by adding inputs)
         {
-
+            Debug.Log("Local Player");
             player = Instantiate(GameLogic.GameLogicInstance.LocalPlayerPrefab, position, Quaternion.identity).GetComponent<Player>();
             player.IsLocal = true;
         }
 
         else
         {
+            Debug.Log("Non Local Player");
             player = Instantiate(GameLogic.GameLogicInstance.PlayerPrefab, position, Quaternion.identity).GetComponent<Player>();
             player.IsLocal = false;
         }

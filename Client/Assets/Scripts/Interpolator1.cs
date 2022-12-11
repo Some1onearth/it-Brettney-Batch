@@ -1,15 +1,16 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Collections;
 
-public class Interpolator : MonoBehaviour
+public class Interpolator1 : MonoBehaviour
 {
     [SerializeField] private float timeElapsed = 0f;
     [SerializeField] private float timeToReachTarget = 0.05f;
-    [SerializeField] private float movementThreshold = 0.05f;
+    [SerializeField] private float movementThreshhold = 0.05f;
+
+
 
     private readonly List<TransformUpdate> futureTransformUpdates = new List<TransformUpdate>();
-
     private float squareMovementThreshold;
     private TransformUpdate to;
     private TransformUpdate from;
@@ -17,11 +18,13 @@ public class Interpolator : MonoBehaviour
 
     private void Start()
     {
-        squareMovementThreshold = movementThreshold * movementThreshold;
+        squareMovementThreshold = movementThreshhold * movementThreshhold;
         to = new TransformUpdate(NetworkManager.NetworkManagerInstance.ServerTick, transform.position);
-        from = new TransformUpdate(NetworkManager.NetworkManagerInstance.InterpolationTick,  transform.position);
+        from = new TransformUpdate(NetworkManager.NetworkManagerInstance.InterpolationTick, transform.position);
         previous = new TransformUpdate(NetworkManager.NetworkManagerInstance.InterpolationTick, transform.position);
     }
+
+
 
     private void Update()
     {
@@ -29,40 +32,47 @@ public class Interpolator : MonoBehaviour
         {
             if (NetworkManager.NetworkManagerInstance.ServerTick >= futureTransformUpdates[i].Tick)
             {
-               
-                    previous = to;
-                    to = futureTransformUpdates[i];
-                    from = new TransformUpdate(NetworkManager.NetworkManagerInstance.InterpolationTick, transform.position);
-               
-
+                previous = to;
+                to = futureTransformUpdates[i];
+                from = new TransformUpdate(NetworkManager.NetworkManagerInstance.InterpolationTick, transform.position);
                 futureTransformUpdates.RemoveAt(i);
                 i--;
                 timeElapsed = 0f;
                 timeToReachTarget = (to.Tick - from.Tick) * Time.fixedDeltaTime;
             }
+
+
+
         }
 
         timeElapsed += Time.deltaTime;
         InterpolatePosition(timeElapsed / timeToReachTarget);
     }
 
+
+
     private void InterpolatePosition(float lerpAmount)
     {
         if ((to.Position - previous.Position).sqrMagnitude < squareMovementThreshold)
         {
             if (to.Position != from.Position)
+            {
                 transform.position = Vector3.Lerp(from.Position, to.Position, lerpAmount);
-
-            return;
+                return;
+            }
         }
+
 
         transform.position = Vector3.LerpUnclamped(from.Position, to.Position, lerpAmount);
     }
 
+
     public void NewUpdate(ushort tick, Vector3 position)
     {
         if (tick <= NetworkManager.NetworkManagerInstance.InterpolationTick)
+        {
             return;
+        }
 
         for (int i = 0; i < futureTransformUpdates.Count; i++)
         {
@@ -72,7 +82,6 @@ public class Interpolator : MonoBehaviour
                 return;
             }
         }
-
-        futureTransformUpdates.Add(new TransformUpdate(tick,  position));
+        futureTransformUpdates.Add(new TransformUpdate(tick, position));
     }
 }
