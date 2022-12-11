@@ -13,6 +13,7 @@ public class SkinSelection : MonoBehaviour
     private void Start()
     {
         instance = this;
+        UpdatePreviewSkin();
     }
 
     public void SelectedSkin(int index)

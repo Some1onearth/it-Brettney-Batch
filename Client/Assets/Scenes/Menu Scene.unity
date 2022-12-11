@@ -613,7 +613,7 @@ MonoBehaviour:
   skinIndex: 0
   skin0: {fileID: 1679119149320943072, guid: d51b6848e7491e64488a860dadead3be, type: 3}
   skin1: {fileID: 2536202080819988186, guid: a0afbd2fbec8d9843a57f6cb7f10cc03, type: 3}
-  _playerPreview: {fileID: 0}
+  _playerPreview: {fileID: 592803876}
 --- !u!1 &182013113
 GameObject:
   m_ObjectHideFlags: 0
@@ -1975,6 +1975,37 @@ MonoBehaviour:
   button: 2
   _isPressed: 0
   _pc: {fileID: 0}
+--- !u!1 &592803876
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 592803877}
+  m_Layer: 0
+  m_Name: SkinPreview
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &592803877
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592803876}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.75, y: -2, z: -94.25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2463786655798436701}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &638972341
 GameObject:
   m_ObjectHideFlags: 0
@@ -3380,7 +3411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c78f6d0c74547447a2e235517d6b8bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  s_ip: 192.168.0.5
+  s_ip: 192.168.20.17
   s_port: 7778
   tickDivergenceTolerance: 1
 --- !u!4 &970941643
@@ -10836,6 +10867,7 @@ Transform:
   - {fileID: 2110259994289552963}
   - {fileID: 264140053545047821}
   - {fileID: 6617378888035968008}
+  - {fileID: 592803877}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
