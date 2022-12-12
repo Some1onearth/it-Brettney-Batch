@@ -177,7 +177,7 @@ public class NetworkManager : MonoBehaviour
     private void FixedUpdate() //This allos the client and server to communicate at fixed intervals
     {
         GameClient.Tick();
-        ServerTick++;
+        ServerTick++;//Maybe this <=
     }
 
     private void OnApplicationQuit() //Quits the client from the server if they quit

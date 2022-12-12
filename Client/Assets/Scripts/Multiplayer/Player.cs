@@ -6,19 +6,22 @@ public class Player : MonoBehaviour
 {
     #region Variables
     public static Dictionary<ushort, Player> list = new Dictionary<ushort, Player>();
-    [SerializeField] private GameObject model;
-    
-    #endregion
+    // [SerializeField] private GameObject model; //
 
     public ushort Id { get; private set; }
 
     public bool IsLocal { get; private set; }
 
-    [SerializeField] private PlayerController playerController;
+  //  [SerializeField] private PlayerController playerController;
     [SerializeField] private Transform camTransform;
-      [SerializeField] private Interpolator interpolator;
+   // [SerializeField] private Interpolator interpolator;
 
     private string username;
+    #endregion
+
+
+
+
 
     private void OnDestroy()
     {
@@ -26,14 +29,18 @@ public class Player : MonoBehaviour
     }
 
 
-    private void Move(ushort tick, Vector3 newPosition, Vector3 forward)//runs function after receiving message from server and places the position.
+    private void Move(Vector3 newPosition, Vector3 forward)//runs function after receiving message from server and places the position.
     {
-        interpolator.NewUpdate(tick, newPosition);
-        //transform.position = newPosition;
+       // interpolator.NewUpdate(tick, newPosition);
+        transform.position = newPosition;
 
 
         if (!IsLocal)
+        {
             camTransform.forward = forward;
+           // playerController.AnimatedBasedOnSpeed();
+        }
+            
         //Debug.Log("Move Method" + forward);
         //if (!IsLocal)
         //{
@@ -41,7 +48,7 @@ public class Player : MonoBehaviour
         //}
         //model.transform.forward = forward;
 
-        playerController.AnimatedBasedOnSpeed();
+       
 
     }
 
@@ -82,7 +89,7 @@ public class Player : MonoBehaviour
     {
         if (list.TryGetValue(message.GetUShort(), out Player player))
         {
-            player.Move(message.GetUShort(), message.GetVector3(), message.GetVector3());//Runs move function on the player with correct ushort
+            player.Move(message.GetVector3(), message.GetVector3());//Runs move function on the player with correct ushort
         }
     }
 

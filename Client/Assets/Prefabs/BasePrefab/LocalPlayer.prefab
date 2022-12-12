@@ -108,14 +108,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3038283114577807256}
-  m_LocalRotation: {x: 0.21608534, y: -0, z: -0, w: 0.9763745}
-  m_LocalPosition: {x: 0, y: 5.49, z: -3.63}
+  m_LocalRotation: {x: 0.6427876, y: 0, z: 0, w: 0.7660445}
+  m_LocalPosition: {x: 0, y: 7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6650242576998584257}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 24.958, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 80, y: 0, z: 0}
 --- !u!20 &3825117286208523354
 Camera:
   m_ObjectHideFlags: 0
@@ -329,7 +329,6 @@ GameObject:
   - component: {fileID: 2664987052517972418}
   - component: {fileID: 1973707392846316128}
   - component: {fileID: -5670004874604616094}
-  - component: {fileID: 6979778456262450582}
   m_Layer: 0
   m_Name: LocalPlayer
   m_TagString: Player
@@ -367,10 +366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b806d043ca99af34d9887555b77bd6a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  model: {fileID: 4276383331403744923}
-  playerController: {fileID: 2664987052517972418}
   camTransform: {fileID: 4782615100965492034}
-  interpolator: {fileID: 6979778456262450582}
 --- !u!114 &2664987052517972418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -434,21 +430,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &6979778456262450582
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5976996778502043199}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1dd07ec8440059a42b262fd456fc6ed2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeElapsed: 0
-  timeToReachTarget: 0.05
-  movementThreshold: 0.05
 --- !u!1001 &7345405496312043540
 PrefabInstance:
   m_ObjectHideFlags: 0

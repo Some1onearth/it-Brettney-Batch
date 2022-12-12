@@ -4,12 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[RequireComponent(typeof(CharacterController))]
+[RequireComponent(typeof(CharacterController))]//
 
 public class PlayerMovement : MonoBehaviour
 {
-    public static Room room;
-    public static EnemyMovement enemymovement;
+    //public static Room room;//
+   // public static EnemyMovement enemymovement;//
     [SerializeField] private Player player;
     [SerializeField] private CharacterController controller;
     [SerializeField] private Transform camProxy;
@@ -25,11 +25,6 @@ public class PlayerMovement : MonoBehaviour
     private float yVelocity;
 
 
-
-
-
-
-
     private void OnValidate()
     {
         if (controller == null)
@@ -41,15 +36,7 @@ public class PlayerMovement : MonoBehaviour
             player = GetComponent<Player>();
         }
 
-
-       
-
-
-
-
-        gravityAcceleration = gravity * Time.fixedDeltaTime * Time.fixedDeltaTime;
-        moveSpeed = movementSpeed * Time.fixedDeltaTime;
-        jumpSpeed = Mathf.Sqrt(jumpHeight * -2f * gravityAcceleration);
+        Initialize();
     }
 
     // Start is called before the first frame update
@@ -93,6 +80,7 @@ public class PlayerMovement : MonoBehaviour
 
     }
     // Update is called once per frame
+
     private void Move(Vector2 inputDirection, bool jump, bool sprint)
     {
 
@@ -149,16 +137,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void SendMovement()//Sends the movement through playermovement to ALL clients with the player's ID so it knows which player is moving.
     {
-        if (NetworkManager.NetworkManagerInstance.CurrentTick % 2 != 0)
-        {
-            return;
-        }
+       
         Message message = Message.Create(MessageSendMode.unreliable, ServerToClientId.playerMovement);
         message.AddUShort(player.Id);
-        message.AddUShort(NetworkManager.NetworkManagerInstance.CurrentTick);
-
+     //   message.AddUShort(NetworkManager.NetworkManagerInstance.CurrentTick);
         message.AddVector3(transform.position);
-        message.AddVector3(transform.forward);
+        message.AddVector3(camProxy.forward);
 
         NetworkManager.NetworkManagerInstance.GameServer.SendToAll(message);
 

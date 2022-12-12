@@ -3411,7 +3411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c78f6d0c74547447a2e235517d6b8bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  s_ip: 192.168.20.17
+  s_ip: 192.168.0.5
   s_port: 7778
   tickDivergenceTolerance: 1
 --- !u!4 &970941643
