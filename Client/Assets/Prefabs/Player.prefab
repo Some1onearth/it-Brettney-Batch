@@ -228,4 +228,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b806d043ca99af34d9887555b77bd6a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  model: {fileID: 2642363783262919545}
   camTransform: {fileID: 3727455330639224411}

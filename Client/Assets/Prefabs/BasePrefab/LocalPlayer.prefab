@@ -366,6 +366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b806d043ca99af34d9887555b77bd6a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  model: {fileID: 4276383331403744923}
   camTransform: {fileID: 4782615100965492034}
 --- !u!114 &2664987052517972418
 MonoBehaviour:
@@ -425,7 +426,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 5976996778502043199}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
@@ -514,7 +515,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1679119149320943072, guid: d51b6848e7491e64488a860dadead3be, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2019509654960533338, guid: d51b6848e7491e64488a860dadead3be, type: 3}
       propertyPath: m_RootOrder

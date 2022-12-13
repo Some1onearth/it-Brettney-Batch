@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
     #region Variables
     public static Dictionary<ushort, Player> list = new Dictionary<ushort, Player>();
-    // [SerializeField] private GameObject model; //
+     [SerializeField] private GameObject model; //
 
     public ushort Id { get; private set; }
 
@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
     }
 
 
-    private void Move(Vector3 newPosition, Vector3 forward)//runs function after receiving message from server and places the position.
+    private void Move(Vector3 newPosition, Vector3 forward, Vector3 modelfoward)//runs function after receiving message from server and places the position.
     {
        // interpolator.NewUpdate(tick, newPosition);
         transform.position = newPosition;
@@ -40,15 +40,15 @@ public class Player : MonoBehaviour
             camTransform.forward = forward;
            // playerController.AnimatedBasedOnSpeed();
         }
-            
+          
         //Debug.Log("Move Method" + forward);
         //if (!IsLocal)
         //{
         //    camTransform.forward = forward;
         //}
-        //model.transform.forward = forward;
-
-       
+       // transform.forward = forward;
+      //  model.transform.rotation = Quaternion.LookRotation(newPosition);
+        model.transform.forward = modelfoward;
 
     }
 
@@ -89,7 +89,7 @@ public class Player : MonoBehaviour
     {
         if (list.TryGetValue(message.GetUShort(), out Player player))
         {
-            player.Move(message.GetVector3(), message.GetVector3());//Runs move function on the player with correct ushort
+            player.Move(message.GetVector3(), message.GetVector3(), message.GetVector3());//Runs move function on the player with correct ushort
         }
     }
 

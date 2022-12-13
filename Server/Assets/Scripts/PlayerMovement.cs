@@ -143,7 +143,7 @@ public class PlayerMovement : MonoBehaviour
      //   message.AddUShort(NetworkManager.NetworkManagerInstance.CurrentTick);
         message.AddVector3(transform.position);
         message.AddVector3(camProxy.forward);
-
+        message.AddVector3(transform.forward);
         NetworkManager.NetworkManagerInstance.GameServer.SendToAll(message);
 
 
