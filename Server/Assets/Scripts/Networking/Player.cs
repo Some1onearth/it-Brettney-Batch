@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
     {
         foreach (Player otherPlayer in list.Values)
             otherPlayer.SendSpawned(id); //Ensures all other clients are spawned into the game correctly.
-
+       
 
 
 

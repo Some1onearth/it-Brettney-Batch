@@ -23,7 +23,9 @@ public class Room : MonoBehaviour
 
     //    [SerializeField] private int _currentWave = 0, _maxWave = 3;
     [SerializeField] private bool _shouldSpawn;
+
     [SerializeField] private int _enemiesToSpawn;
+    [SerializeField] public static bool spawnEnemy;
     [SerializeField] private GameObject _enemyPrefab;
 
     [SerializeField] public static ushort enemyReferenceID = 0;
@@ -40,6 +42,12 @@ public class Room : MonoBehaviour
 
     private void Update()
     {
+        if (spawnEnemy)
+        {
+            spawnEnemy = _shouldSpawn;
+        }
+      
+
         if (_shouldSpawn)
         {
             _shouldSpawn = false;
@@ -47,8 +55,12 @@ public class Room : MonoBehaviour
             _shouldSpawn = false;
         }
     }
-    private void SpawnEnemies()
+    public  void SpawnEnemies()
     {
+        
+
+
+
         for (int i = 0; i < _enemiesToSpawn; i++)
         {
             enemySpawnPosition = new Vector3(UnityEngine.Random.Range(-15, 15), 0, UnityEngine.Random.Range(20, 45));
@@ -56,6 +68,28 @@ public class Room : MonoBehaviour
         }
         _shouldSpawn = false;
     }
+
+    //private void ControllerColliderHit(ControllerColliderHit hit)//@@@@@TESTING
+    //{
+    //    if (hit.gameObject.CompareTag("Player"))//We will send a message to the client containing what enemy was hit, and the new player Score.
+    //    {
+    //        Debug.Log("Controllerhit");
+    //        _shouldSpawn = true;
+    //        SpawnEnemies();
+
+    //    }
+    //}
+
+    //private void OnCollisionEnter(Collision collision)//@@@@@TESTING
+    //{
+    //    if (collision.gameObject.CompareTag("Player"))//We will send a message to the client containing what enemy was hit, and the new player Score.
+    //    {
+    //        Debug.Log("OntriggerEnter");
+    //        _shouldSpawn = true;
+
+
+    //    }
+    //}
 
     #region Network Enemy Spawn Methods
     private void OnDestroy()
@@ -65,6 +99,7 @@ public class Room : MonoBehaviour
 
     public void Spawn(Vector3 position) //Takes in the position of where the Enemy should spawn.
     {
+         //Ensures all other clients are spawned into the game correctly.
         //Need to set the ID on the enemy as soon as it spawns in.
         //foreach (Room otherPlayer in list.Values)
         //    otherPlayer.SendSpawned(EnemyId);

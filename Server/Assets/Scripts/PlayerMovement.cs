@@ -81,6 +81,16 @@ public class PlayerMovement : MonoBehaviour
     }
     // Update is called once per frame
 
+
+
+    //private void OnTriggerEnter(Collider other)//TESTING
+    //{
+    //    if (other.gameObject.CompareTag("Room"))//We will send a message to the client containing what enemy was hit, and the new player Score.
+    //    {
+    //        Room.spawnEnemy = true;
+
+    //    }
+    //}
     private void Move(Vector2 inputDirection, bool jump, bool sprint)
     {
 

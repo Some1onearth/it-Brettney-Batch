@@ -108,7 +108,7 @@ public class EnemyMovement : MonoBehaviour
             Debug.Log("Collission with Player");
             EnemyDead();
            Destroy(this.gameObject);
-
+            
         }
     }
 
