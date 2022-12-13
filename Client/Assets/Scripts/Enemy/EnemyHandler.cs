@@ -8,6 +8,10 @@ public class EnemyHandler : MonoBehaviour
 {
     public ushort EnemyId { get; set; } //public get and set for EnemyID
 
+
+
+
+
     public void Move(Vector3 position, Vector3 forward)//Recieves the position and forward and sets the values.
     {
             transform.position = position;

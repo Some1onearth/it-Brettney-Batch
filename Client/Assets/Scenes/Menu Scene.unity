@@ -5457,6 +5457,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1456642456}
+  - component: {fileID: 1456642457}
   m_Layer: 0
   m_Name: EnemySpawnHandler
   m_TagString: Untagged
@@ -5479,6 +5480,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1456642457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456642455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9624db889b0683246bd4693a2bdf324d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prefabEnemy: {fileID: 1988563410076853048, guid: f5e2d2805028082449a8d5b7063a5bf4, type: 3}
 --- !u!1 &1457138506
 GameObject:
   m_ObjectHideFlags: 0
