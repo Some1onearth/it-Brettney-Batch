@@ -76,25 +76,25 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void AnimatedBasedOnSpeed()
+    public void AnimatedBasedOnSpeed() // moves animation based on speed
     {
         lastPosition.y = transform.position.y;
         float distanceMoved = Vector3.Distance(transform.position, lastPosition);
-        animator.SetBool("IsMoving", distanceMoved > 0.01f);
-        animator.SetBool("IsSprinting", distanceMoved > sprintThreshold);
+        animator.SetBool("IsMoving", distanceMoved > 0.01f); //changes bool to moving to show animation state for moving
+        animator.SetBool("IsSprinting", distanceMoved > sprintThreshold); //changes bool to sprinting to show animation state for sprinting
         //  Debug.Log(distanceMoved);
 
         lastPosition = transform.position;
     }
 
-    public void ShootBullet()
+    public void ShootBullet() //shoots projectile
     {
-        if (Input.GetMouseButton(1) || attackButton)
+        if (Input.GetMouseButton(1) || attackButton) //player pressed the attack button
         {
-            if(Time.realtimeSinceStartup - timer >= 1)
+            if(Time.realtimeSinceStartup - timer >= 1) //time since startup
             {
                 timer = Time.realtimeSinceStartup;
-                Instantiate(projectilePrefab, _projectileSpawner.transform.position, Quaternion.identity);
+                Instantiate(projectilePrefab, _projectileSpawner.transform.position, Quaternion.identity); //spawns the bullet.
             }
         }
     }

@@ -40,9 +40,10 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-
+        PlayerPrefs.GetInt("Score"); //gets current score.
+        PlayerPrefs.GetInt("Currency"); //gets current currency.
         endGameScreen.SetActive(false);
-        gameHud.SetActive(true);
+        gameHud.SetActive(true); //sets game hud on
        // _curLevel = 1;
         _maxMobCount = 4;
         _curMobCount = 0;
@@ -103,27 +104,27 @@ public class GameManager : MonoBehaviour
 
     public void AddScore() // reference this within hitcollision code when adding score
     {
-        currentScore += 1;
-        scoreText.text = "" + currentScore;
-        PlayerPrefs.SetInt("Score", currentScore);
+        currentScore += 1; //adds 1 score to variable.
+        scoreText.text = "" + currentScore; //updates the text box.
+        PlayerPrefs.SetInt("Score", currentScore); //sets player score.
         Currency();
     }
 
     public void Currency()
     {
-        currentCurrency = currentScore * 10;
-        currencyText.text = "" + currentCurrency;
-        PlayerPrefs.SetInt("Currency", currentCurrency);
+        currentCurrency = currentScore * 10; //multiplies score by 10 to get the currency.
+        currencyText.text = "" + currentCurrency; //updates currency text box.
+        PlayerPrefs.SetInt("Currency", currentCurrency); //sets player currency.
     }
 
     public void Spend(int price)
     {
-        currentCurrency -= price;
-        currencyText.text = "" + currentCurrency;
-        PlayerPrefs.SetInt("Currency", currentCurrency);
+        currentCurrency -= price; //takes away currency when used to spend.
+        currencyText.text = "" + currentCurrency; // updates currency text.
+        PlayerPrefs.SetInt("Currency", currentCurrency); //sets player currency.
     }
 
-    public void HowManyToSpawn(int spawnvalue)
+    public void HowManyToSpawn(int spawnvalue) //counts how many enemies to spawn
     {
        
 
@@ -136,7 +137,7 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void SpawnEnemy()
+    public void SpawnEnemy() //spawns enemies.
     {
         Instantiate(enemyMob, new Vector3((Random.Range(-21.75f,23.25f)),0 ,(Random.Range(13,60)) ),Quaternion.identity);
     }
